@@ -1,0 +1,80 @@
+@use '../../root' as *;
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: sticky;
+	top: 0;
+
+	padding: 1em var(--margin);
+
+	background-color: var(--bg);
+	box-shadow: var(--shadow-sm);
+
+	nav {
+		.logo {
+			display: none;
+
+			svg {
+				height: 2.7em; // always the same height regardless of screen size
+				width: auto;
+
+				fill: var(--text-muted);
+
+				&:hover {
+					cursor: pointer;
+					fill: var(--text);
+				}
+			}
+
+			@media only screen and (min-width: $md) {
+				display: inline-block;
+			}
+		}
+
+		.header-link {
+			text-decoration: none;
+			color: var(--text-muted);
+
+			&:hover {
+				cursor: pointer;
+				color: var(--text);
+			}
+
+			&.contact {
+				display: inline;
+
+				@media only screen and (min-width: $xs) {
+					display: none;
+				}
+			}
+
+			.menu-text {
+				display: none;
+
+				@media only screen and (min-width: $sm) {
+					display: inline;
+				}
+			}
+
+			.material-icon {
+				display: inline;
+
+				@media only screen and (min-width: $sm) {
+					display: none;
+				}
+			}
+		}
+
+		.btn-primary {
+			text-transform: uppercase;
+			display: none;
+
+			@media only screen and (min-width: $xs) {
+				display: inline-block;
+			}
+		}
+	}
+}

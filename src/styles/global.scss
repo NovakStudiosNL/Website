@@ -1,0 +1,17 @@
+@forward './root.scss';
+
+@forward './globals/btn.scss';
+@forward './globals/flexbox.scss';
+@forward './globals/icon.scss';
+@forward './globals/layout.scss';
+@forward './globals/link.scss';
+@forward './globals/list.scss';
+@forward './globals/text.scss';
+
+@forward './templates/layout/header.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');

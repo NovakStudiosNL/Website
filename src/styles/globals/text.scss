@@ -1,0 +1,62 @@
+@use '../root' as *;
+
+p,
+a,
+button,
+li {
+	font-family: var(--font-text);
+	font-size: var(--text-size);
+	color: var(--text);
+}
+
+.xl,
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+	font-family: var(--font-h);
+	color: var(--text);
+}
+
+.xl {
+	font-size: var(--size-xl);
+}
+
+h1,
+.h1 {
+	font-size: var(--size-h1);
+}
+
+h2,
+.h2 {
+	font-size: var(--size-h2);
+}
+
+h3,
+.h3 {
+	font-size: var(--size-h3);
+}
+
+h4,
+.h4 {
+	font-size: var(--size-h4);
+}
+
+h5,
+.h5 {
+	font-size: var(--size-h5);
+}
+
+.small {
+	font-size: var(size-sm);
+}
+
+.tiny {
+	font-size: var(size-tiny);
+}

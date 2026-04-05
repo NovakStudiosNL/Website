@@ -1,0 +1,24 @@
+@use '../root' as *;
+
+.btn-primary {
+	display: block;
+
+	padding: 0.5em 1em;
+	border-radius: var(--border-rad);
+
+	box-shadow: var(--shadow-sm);
+
+	font-family: var(--font-h);
+	font-size: var(--size-h5);
+
+	background-color: var(--primary);
+	color: var(--bg);
+
+	&:hover {
+		cursor: pointer;
+
+		box-shadow: var(--shadow-lg);
+
+		background-color: var(--primary-dark);
+	}
+}
