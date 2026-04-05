@@ -36,9 +36,11 @@ $xl: 75em;
 		Arial, system-ui, sans-serif;
 
 	// Font sizes
-	--typescale: 1.333;
-	--typescale-sm: 1.125;
-	--size-text: 1em;
+	--typescale: 1.125;
+	@media only screen and (min-width: $md) {
+		--typescale: 1.333;
+	}
+	--size-text: 16px;
 	--size-icon: 1.5em;
 
 	--size-sm: calc(var(--size-text) / var(--typescale));

@@ -13,7 +13,7 @@ templates["layout/head"] = template({"compiler":[8,">= 4.3.0"],"main":function(c
 
   return "<meta charset='UTF-8' />\r\n<meta name='viewport' content='width=device-width, initial-scale=1.0' />\r\n<title>"
     + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"pageTitle") || (depth0 != null ? lookupProperty(depth0,"pageTitle") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"pageTitle","hash":{},"data":data,"loc":{"start":{"line":3,"column":7},"end":{"line":3,"column":20}}}) : helper)))
-    + "</title>\r\n<link rel='stylesheet' href='/public/styles/global.css' />";
+    + "</title>\r\n<link rel='stylesheet' href='/Website/public/styles/global.css' />";
 },"useData":true});
 templates["layout/header"] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {

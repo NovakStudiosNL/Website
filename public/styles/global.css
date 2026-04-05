@@ -24,9 +24,15 @@
   --font-text:
   	'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans',
   	Arial, system-ui, sans-serif;
-  --typescale: 1.333;
-  --typescale-sm: 1.125;
-  --size-text: 1em;
+  --typescale: 1.125;
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --typescale: 1.333;
+  }
+}
+:root {
+  --size-text: 16px;
   --size-icon: 1.5em;
   --size-sm: calc(var(--size-text) / var(--typescale));
   --size-tiny: calc(var(--size-small) / var(--typescale));
@@ -281,11 +287,34 @@ header nav .header-link.contact {
   }
 }
 header nav .header-link .menu-text {
-  display: none;
+  position: absolute;
+  bottom: -1em;
+  font-family: var(--font-text);
+  font-size: var(--size-sm);
+  color: var(--bg);
+  background-color: var(--text-muted);
+  border-radius: calc(var(--border-rad) * 2);
+  padding: 0.125em 0.5em;
+  font-weight: bold;
+}
+header nav .header-link .menu-text::before {
+  content: "";
+  position: absolute;
+  top: -0.5em;
+  left: 1em;
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 0.75em solid var(--text-muted);
+  border-radius: var(--border-rad);
 }
 @media only screen and (min-width: 36em) {
   header nav .header-link .menu-text {
-    display: inline;
+    all: unset;
+  }
+  header nav .header-link .menu-text::before {
+    all: unset;
   }
 }
 header nav .header-link .material-icon {
