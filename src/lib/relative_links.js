@@ -7,6 +7,7 @@ const replaceLinkString = (el) => {
 
 const fixRelativeLinks = () => {
 	if (location.hostname == 'localhost' || location.hostname == '127.0.0.1') {
+		console.log('Dev environemnt, replacing all links accordingly...')
 		document.querySelectorAll('a').forEach((link) => {
 			replaceLinkString(link)
 		})
