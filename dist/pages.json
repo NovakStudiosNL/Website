@@ -1,0 +1,8 @@
+{
+	"index": {
+		"template": "src/templates/pages/index.hbs",
+		"head": {
+			"title": "Novak Studios | Home"
+		}
+	}
+}

@@ -3,9 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"style:watch": "sass --watch src/styles:public/styles",
-		"compile": "handlebars src/templates -f public/js/templates.js -e hbs && sass --watch src/styles:public/styles",
-		"compile:watch": "node scripts/compileTemplates.js",
+		"style": "sass --watch src/styles:dist/styles",
 		"locales": "node scripts/buildLocales.js",
 		"lint": "eslint ."
 	},
@@ -23,9 +21,11 @@
 	"devDependencies": {
 		"eslint": "^10.2.0",
 		"eslint-config-xo": "^0.51.0",
-		"prettier": "3.8.1"
+		"prettier": "^3.8.1"
 	},
 	"dependencies": {
-		"handlebars": "^4.7.9"
+		"fs-extra": "^11.3.4",
+		"handlebars": "^4.7.9",
+		"i18next": "^26.0.5"
 	}
 }

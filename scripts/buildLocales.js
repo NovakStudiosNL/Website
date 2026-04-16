@@ -1,7 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-// import fs from 'fs'
-// import path from 'path'
 const fallbackLang = 'en'
 const overwriteMissingTranslations = true
 
@@ -46,9 +44,19 @@ const fixMissingTranslations = () => {
 const fixMissingFolders = (dir, fallbackDir) => {
 	for (const file of fs.readdirSync(fallbackDir)) {
 		const fileDir = path.join(fallbackDir, file)
+		const statSync = fs.statSync(fileDir)
 
 		if (fs.readdirSync(dir).includes(file)) {
-			if (!fs.statSync(fileDir).isDirectory()) {
+			if (!statSync.isDirectory()) {
+				if (
+					statSync.size !== 0 &&
+					fs.statSync(path.join(dir, file)).size == 0
+				) {
+					console.log(`Empty file in ${dir}: "${file}". Copying file.`)
+					fixMissingFiles(file, dir, fileDir)
+					continue
+				}
+
 				fixMissingKeys(file, dir, fileDir)
 				continue
 			}
@@ -56,7 +64,7 @@ const fixMissingFolders = (dir, fallbackDir) => {
 			continue
 		}
 
-		if (!fs.statSync(fileDir).isDirectory()) {
+		if (!statSync.isDirectory()) {
 			console.log(`Missing file in ${dir}: "${file}". Copying file.`)
 			fixMissingFiles(file, dir, fileDir)
 			continue
@@ -152,16 +160,31 @@ const buildTranslations = () => {
 
 	const translations = loadTranslations()
 
-	fs.writeFileSync(
-		path.join(
-			__dirname.substring(0, __dirname.lastIndexOf('/')),
-			'public',
-			'locales',
-			'locales.js',
-		),
-		`const locales = ${JSON.stringify(translations)}`,
-		'utf8',
-	)
+	// fs.writeFileSync(
+	// 	path.join(
+	// 		__dirname.substring(0, __dirname.lastIndexOf('/')),
+	// 		'public',
+	// 		'locales',
+	// 		'locales.js',
+	// 	),
+	// 	`const locales = ${JSON.stringify(translations)}`,
+	// 	'utf8',
+	// )
+
+	Object.keys(translations).forEach((lng) => {
+		fs.writeFileSync(
+			path.join(
+				__dirname.substring(0, __dirname.lastIndexOf('/')),
+				'public',
+				'locales',
+				`${lng}.json`,
+			),
+			`${JSON.stringify(translations[lng])}`,
+			'utf8',
+		)
+	})
+
+	console.log(translations)
 
 	console.log(`Wrote JSON of all locales`)
 }

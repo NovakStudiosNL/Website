@@ -1,1 +1,0 @@
-const locales = {"en":{"pages":{},"templates":{"layout":{"header":{"home":"Home","team":"Team","projects":"Projects","contact":"Reach out!"}}}},"it":{},"nl":{}}

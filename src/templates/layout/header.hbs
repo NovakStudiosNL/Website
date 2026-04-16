@@ -1,5 +1,5 @@
 <nav class='max-width grow-1 d-flex justify-between align-center'>
-	<a class='logo self-stretch' href='/Website/index.html'>
+	<a class='logo self-stretch' href='{{base}}/index.html'>
 		<svg
 			width='291'
 			height='88'
@@ -35,37 +35,37 @@
 
 	{{! Menu items }}
 	<ul class='d-flex gap-2 center grow-1'>
-		<li><a class='h5 header-link' href='/Website/index.html'>
-				<span class='menu-text'>{{t 'templates/layout/header/home'}}</span>
+		<li><a class='h5 header-link' href='{{base}}/index.html'>
+				<span class='menu-text'>{{t 'templates.layout.header.home'}}</span>
 				<span
 					class='material-icon'
-					data-text='{{t-data "templates/layout/header/home"}}'
+					data-text='{{t "templates.layout.header.home"}}'
 				>home</span>
 			</a></li>
 		<li><a class='h5 header-link'>
-				<span class='menu-text'>{{t 'templates/layout/header/team'}}</span>
+				<span class='menu-text'>{{t 'templates.layout.header.team'}}</span>
 				<span
 					class='material-icon'
-					data-text='{{t-data "templates/layout/header/team"}}'
+					data-text='{{t "templates.layout.header.team"}}'
 				>group</span>
 			</a></li>
 		<li><a class='h5 header-link'>
-				<span class='menu-text'>{{t 'templates/layout/header/projects'}}</span>
+				<span class='menu-text'>{{t 'templates.layout.header.projects'}}</span>
 				<span
 					class='material-icon'
-					data-text='{{t-data "templates/layout/header/projects"}}'
+					data-text='{{t "templates.layout.header.projects"}}'
 				>cases</span>
 			</a></li>
 		<li class='h5 header-link contact'>
 			<a href='#footer'>
 				<span
 					class='material-icon'
-					data-text='{{t-data "templates/layout/header/contact"}}'
+					data-text='{{t "templates.layout.header.contact"}}'
 				>call</span>
 			</a></li>
 	</ul>
 
 	<a href='#footer' class='btn-primary'>
-		{{t 'templates/layout/header/contact'}}
+		{{t 'templates.layout.header.contact'}}
 	</a>
 </nav>

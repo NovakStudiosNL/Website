@@ -1,21 +1,10 @@
 <!doctype html>
-<html lang="en">
-	<head></head>
-	<body>
-		<header></header>
-		<footer></footer>
-	</body>
+<html lang="en" id="app">
+	<!-- Handlebars -->
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
 
-	<script>
-		const script = document.createElement('script')
+	<!-- i18next -->
+	<script src="https://unpkg.com/i18next@23/i18next.min.js"></script>
 
-		if (location.hostname == 'localhost' || location.hostname == '127.0.0.1') {
-			script.src = '/src/lib/insert_script.js'
-		} else {
-			script.src = '/Website/src/lib/insert_script.js'
-		}
-
-		document.querySelector('head').appendChild(script)
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.9/dist/handlebars.runtime.js"></script>
+	<script src="app.js"></script>
 </html>
