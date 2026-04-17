@@ -28,12 +28,17 @@ footer {
 		}
 
 		& > img {
-			height: 8em;
-			width: 8em;
+			height: 5em;
+			width: 5em;
 
 			order: 1;
 			@media only screen and (min-width: $sm) {
 				order: unset;
+			}
+
+			@media only screen and (min-width: $md) {
+				height: 8em;
+				width: 8em;
 			}
 		}
 
