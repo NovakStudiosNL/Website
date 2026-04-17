@@ -37,9 +37,15 @@ footer {
 			}
 		}
 
-		ul button img {
-			height: calc(1em * var(--typescale));
-			aspect-ratio: 1 / 1;
+		ul button {
+			&.active {
+				font-weight: bold;
+			}
+
+			img {
+				height: calc(1em * var(--typescale));
+				aspect-ratio: 1 / 1;
+			}
 		}
 	}
 

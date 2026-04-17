@@ -75,6 +75,8 @@ function render(page = {}) {
 
 		base: BASE_PATH,
 
+		lang: i18next.language || 'en',
+
 		head: page.head || { title: 'Novak Studios' },
 
 		header: page.header || { page: 'index' },
@@ -87,8 +89,8 @@ function render(page = {}) {
 
 // Init app
 ;(async function () {
-	Handlebars.registerHelper('isActive', (page, name) =>
-		page === name ? 'active' : '',
+	Handlebars.registerHelper('isActive', (string, condition) =>
+		string === condition ? 'active' : '',
 	)
 	await loadLayout()
 	await loadPartials([

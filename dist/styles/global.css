@@ -330,6 +330,9 @@ footer div:first-of-type > img {
     order: unset;
   }
 }
+footer div:first-of-type ul button.active {
+  font-weight: bold;
+}
 footer div:first-of-type ul button img {
   height: calc(1em * var(--typescale));
   aspect-ratio: 1/1;
