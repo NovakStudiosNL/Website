@@ -34,61 +34,58 @@ header {
 			}
 		}
 
-		.header-link {
-			text-decoration: none;
-			color: var(--text-muted);
+		ul {
+			gap: 1em;
 
-			&:hover {
-				cursor: pointer;
-				color: var(--text);
+			@media only screen and (min-width: $sm) {
+				gap: 2em;
 			}
 
-			&.contact {
-				display: inline;
+			.header-link {
+				text-decoration: none;
+				color: var(--text-muted);
+				text-align: center;
 
-				@media only screen and (min-width: $xs) {
-					display: none;
-				}
-			}
+				&.active,
+				&:hover {
+					color: var(--text);
 
-			.menu-text {
-				position: absolute;
-				bottom: -1em;
-				font-family: var(--font-text);
-				font-size: var(--size-sm);
-				color: var(--bg);
-				background-color: var(--text-muted);
-				border-radius: calc(var(--border-rad) * 2);
-				padding: 0.125em 0.5em;
-				font-weight: bold;
-
-				&::before {
-					content: '';
-					position: absolute;
-					top: -0.5em;
-					left: 1em;
-					width: 0;
-					height: 0;
-					border-left: 1em solid transparent;
-					border-right: 1em solid transparent;
-					border-bottom: 0.75em solid var(--text-muted);
-					border-radius: var(--border-rad);
-				}
-
-				@media only screen and (min-width: $sm) {
-					all: unset;
-
-					&::before {
-						all: unset;
+					.menu-text {
+						display: inline;
 					}
 				}
-			}
 
-			.material-icon {
-				display: inline;
+				&:hover {
+					cursor: pointer;
+				}
 
-				@media only screen and (min-width: $sm) {
+				&.contact {
+					@media only screen and (min-width: $xs) {
+						display: none;
+					}
+				}
+
+				.menu-text {
+					order: 1;
+					font-size: var(--size-sm);
+					text-align: center;
 					display: none;
+
+					@media only screen and (min-width: $xs) {
+						font-size: unset;
+					}
+
+					@media only screen and (min-width: $sm) {
+						display: inline;
+					}
+				}
+
+				.material-icon {
+					display: inline;
+
+					@media only screen and (min-width: $sm) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -96,6 +93,7 @@ header {
 		.btn-primary {
 			text-transform: uppercase;
 			display: none;
+			text-align: center;
 
 			@media only screen and (min-width: $xs) {
 				display: inline-block;

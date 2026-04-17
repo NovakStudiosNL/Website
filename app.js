@@ -75,9 +75,9 @@ function render(page = {}) {
 
 		base: BASE_PATH,
 
-		head: page.head || {
-			title: 'Novak Studios',
-		},
+		head: page.head || { title: 'Novak Studios' },
+
+		header: page.header || { page: 'index' },
 
 		body: page.body || '',
 	})
@@ -87,6 +87,9 @@ function render(page = {}) {
 
 // Init app
 ;(async function () {
+	Handlebars.registerHelper('isActive', (page, name) =>
+		page === name ? 'active' : '',
+	)
 	await loadLayout()
 	await loadPartials([
 		'src/templates/layout/head.hbs',

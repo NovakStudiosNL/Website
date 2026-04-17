@@ -34,35 +34,56 @@
 	</a>
 
 	{{! Menu items }}
-	<ul class='d-flex gap-2 center grow-1'>
-		<li><a class='h5 header-link' href='{{base}}/index.html'>
+	<ul class='d-flex center grow-1'>
+		<li>
+			<a
+				class='h5 header-link d-flex center flex-col
+					{{isActive header.page "index"}}'
+				href='{{base}}/index.html'
+			>
 				<span class='menu-text'>{{t 'templates.layout.header.home'}}</span>
 				<span
 					class='material-icon'
 					data-text='{{t "templates.layout.header.home"}}'
 				>home</span>
-			</a></li>
-		<li><a class='h5 header-link'>
+			</a>
+		</li>
+
+		<li>
+			<a
+				class='h5 header-link d-flex center flex-col
+					{{isActive header.page "team"}}'
+			>
 				<span class='menu-text'>{{t 'templates.layout.header.team'}}</span>
 				<span
 					class='material-icon'
 					data-text='{{t "templates.layout.header.team"}}'
 				>group</span>
-			</a></li>
-		<li><a class='h5 header-link'>
+			</a>
+		</li>
+
+		<li>
+			<a
+				class='h5 header-link d-flex center flex-col
+					{{isActive header.page "projects"}}'
+			>
 				<span class='menu-text'>{{t 'templates.layout.header.projects'}}</span>
 				<span
 					class='material-icon'
 					data-text='{{t "templates.layout.header.projects"}}'
 				>cases</span>
-			</a></li>
-		<li class='h5 header-link contact'>
-			<a href='#footer'>
+			</a>
+		</li>
+
+		<li class=''>
+			<a class='h5 header-link contact d-flex center flex-col' href='#footer'>
+				<span class='menu-text'>{{t 'templates.layout.header.contact'}}</span>
 				<span
 					class='material-icon'
 					data-text='{{t "templates.layout.header.contact"}}'
 				>call</span>
-			</a></li>
+			</a>
+		</li>
 	</ul>
 
 	<a href='#footer' class='btn-primary'>

@@ -15,8 +15,10 @@ $xl: 75em;
 	--col-md: 8;
 	--col: 12;
 
-	--margin-xs: 2em;
-	--margin: 4em;
+	--margin: 2em;
+	@media only screen and (min-width: $xs) {
+		--margin: 4em;
+	}
 
 	--max-width-xs: calc(var(--xs) - (var(--margin-xs) * 2));
 	--max-width-sm: calc(var(--sm) - (var(--margin) * 2));
@@ -70,7 +72,7 @@ $xl: 75em;
 	--info: #19437c;
 
 	// Shades
-	--text-muted: hsl(from var(--text) h calc(s - 10) calc(l - 10));
+	--text-muted: hsl(from var(--text) h calc(s - 20) calc(l - 20));
 
 	--bg-dark: hsl(from var(--bg) h s calc(l - 5));
 	--primary-dark: hsl(from var(--primary) h s calc(l - 5));

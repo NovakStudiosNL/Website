@@ -4,6 +4,10 @@
 	display: flex;
 }
 
+.flex-col {
+	flex-direction: column;
+}
+
 .center {
 	justify-content: center;
 	align-items: center;
@@ -15,6 +19,10 @@
 
 .justify-between {
 	justify-content: space-between;
+}
+
+.justify-start {
+	justify-content: flex-start;
 }
 
 .align-center {
