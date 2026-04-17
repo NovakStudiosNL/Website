@@ -7,9 +7,19 @@
   --md: 48em;
   --lg: 62em;
   --xl: 75em;
-  --col-sm: 4;
-  --col-md: 8;
-  --col: 12;
+  --col: 4;
+}
+@media only screen and (min-width: 36em) {
+  :root {
+    --col: 8;
+  }
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --col: 12;
+  }
+}
+:root {
   --margin: 2em;
 }
 @media only screen and (min-width: 30em) {
@@ -41,7 +51,7 @@
   --size-text: 16px;
   --size-icon: 1.5em;
   --size-sm: calc(var(--size-text) / var(--typescale));
-  --size-tiny: calc(var(--size-small) / var(--typescale));
+  --size-tiny: calc(var(--size-sm) / var(--typescale));
   --size-large: calc(var(--size-text) * var(--typescale));
   --size-h5: calc(var(--size-text) * var(--typescale));
   --size-h4: calc(var(--size-h5) * var(--typescale));
@@ -105,6 +115,15 @@
   background-color: var(--primary-dark);
 }
 
+.no-btn {
+  background: none;
+  border: none;
+}
+.no-btn:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .d-flex {
   display: flex;
 }
@@ -136,6 +155,18 @@
 
 .align-stretch {
   align-items: stretch;
+}
+
+.gap-025 {
+  gap: 0.25em;
+}
+
+.gap-05 {
+  gap: 0.5em;
+}
+
+.gap-075 {
+  gap: 0.75em;
 }
 
 .gap-2 {
@@ -250,11 +281,88 @@ h5,
 }
 
 .small {
-  font-size: var(size-sm);
+  font-size: var(--size-sm);
 }
 
 .tiny {
-  font-size: var(size-tiny);
+  font-size: var(--size-tiny);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  gap: var(--gutter);
+  padding: 2em var(--margin);
+  background-color: var(--bg-darkest);
+}
+footer div:first-of-type {
+  grid-column: 1/4;
+  grid-column: span 4;
+  grid-row: 2;
+}
+@media only screen and (min-width: 36em) {
+  footer div:first-of-type {
+    grid-row: auto;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 48em) {
+  footer div:first-of-type {
+    grid-column: 1/6;
+  }
+}
+@media only screen and (min-width: 62em) {
+  footer div:first-of-type {
+    grid-column-start: 2;
+  }
+}
+footer div:first-of-type > img {
+  height: 8em;
+  width: 8em;
+  order: 1;
+}
+@media only screen and (min-width: 36em) {
+  footer div:first-of-type > img {
+    order: unset;
+  }
+}
+footer div:first-of-type ul button img {
+  height: calc(1em * var(--typescale));
+  aspect-ratio: 1/1;
+}
+footer div:last-of-type {
+  grid-column: 1/4;
+}
+@media only screen and (min-width: 36em) {
+  footer div:last-of-type {
+    grid-column: 5/8;
+  }
+}
+@media only screen and (min-width: 48em) {
+  footer div:last-of-type {
+    grid-column: 7/12;
+  }
+}
+@media only screen and (min-width: 62em) {
+  footer div:last-of-type {
+    grid-column-end: 11;
+  }
+}
+footer div:last-of-type ul a {
+  font-size: var(--size-sm);
+}
+@media only screen and (min-width: 48em) {
+  footer div:last-of-type ul a {
+    font-size: unset;
+  }
+}
+footer div:last-of-type ul img {
+  height: 1.25em;
+  aspect-ratio: 1/1;
 }
 
 header {

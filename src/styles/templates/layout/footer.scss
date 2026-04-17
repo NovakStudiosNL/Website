@@ -1,0 +1,75 @@
+@use '../../root' as *;
+
+footer {
+	display: grid;
+	grid-template-columns: repeat(var(--col), 1fr);
+	gap: var(--gutter);
+
+	padding: 2em var(--margin);
+
+	background-color: var(--bg-darkest);
+
+	div:first-of-type {
+		grid-column: 1 / 4;
+		grid-column: span 4;
+		grid-row: 2;
+
+		@media only screen and (min-width: $sm) {
+			grid-row: auto;
+			flex-direction: column;
+		}
+
+		@media only screen and (min-width: $md) {
+			grid-column: 1 / 6;
+		}
+
+		@media only screen and (min-width: $lg) {
+			grid-column-start: 2;
+		}
+
+		& > img {
+			height: 8em;
+			width: 8em;
+
+			order: 1;
+			@media only screen and (min-width: $sm) {
+				order: unset;
+			}
+		}
+
+		ul button img {
+			height: calc(1em * var(--typescale));
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	div:last-of-type {
+		grid-column: 1 / 4;
+
+		@media only screen and (min-width: $sm) {
+			grid-column: 5 / 8;
+		}
+
+		@media only screen and (min-width: $md) {
+			grid-column: 7 / 12;
+		}
+
+		@media only screen and (min-width: $lg) {
+			grid-column-end: 11;
+		}
+
+		ul {
+			a {
+				font-size: var(--size-sm);
+
+				@media only screen and (min-width: $md) {
+					font-size: unset;
+				}
+			}
+			img {
+				height: 1.25em;
+				aspect-ratio: 1 / 1;
+			}
+		}
+	}
+}

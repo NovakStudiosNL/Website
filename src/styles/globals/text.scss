@@ -54,9 +54,13 @@ h5,
 }
 
 .small {
-	font-size: var(size-sm);
+	font-size: var(--size-sm);
 }
 
 .tiny {
-	font-size: var(size-tiny);
+	font-size: var(--size-tiny);
+}
+
+.bold {
+	font-weight: bold;
 }

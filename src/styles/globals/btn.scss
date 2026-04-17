@@ -22,3 +22,13 @@
 		background-color: var(--primary-dark);
 	}
 }
+
+.no-btn {
+	background: none;
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+		font-weight: bold;
+	}
+}

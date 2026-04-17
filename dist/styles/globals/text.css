@@ -3,9 +3,19 @@
   --md: 48em;
   --lg: 62em;
   --xl: 75em;
-  --col-sm: 4;
-  --col-md: 8;
-  --col: 12;
+  --col: 4;
+}
+@media only screen and (min-width: 36em) {
+  :root {
+    --col: 8;
+  }
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --col: 12;
+  }
+}
+:root {
   --margin: 2em;
 }
 @media only screen and (min-width: 30em) {
@@ -37,7 +47,7 @@
   --size-text: 16px;
   --size-icon: 1.5em;
   --size-sm: calc(var(--size-text) / var(--typescale));
-  --size-tiny: calc(var(--size-small) / var(--typescale));
+  --size-tiny: calc(var(--size-sm) / var(--typescale));
   --size-large: calc(var(--size-text) * var(--typescale));
   --size-h5: calc(var(--size-text) * var(--typescale));
   --size-h4: calc(var(--size-h5) * var(--typescale));
@@ -139,11 +149,15 @@ h5,
 }
 
 .small {
-  font-size: var(size-sm);
+  font-size: var(--size-sm);
 }
 
 .tiny {
-  font-size: var(size-tiny);
+  font-size: var(--size-tiny);
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=text.css.map */

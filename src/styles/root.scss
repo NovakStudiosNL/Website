@@ -11,9 +11,13 @@ $xl: 75em;
 	--lg: 62em;
 	--xl: 75em;
 
-	--col-sm: 4;
-	--col-md: 8;
-	--col: 12;
+	--col: 4;
+	@media only screen and (min-width: $sm) {
+		--col: 8;
+	}
+	@media only screen and (min-width: $md) {
+		--col: 12;
+	}
 
 	--margin: 2em;
 	@media only screen and (min-width: $xs) {
@@ -46,7 +50,7 @@ $xl: 75em;
 	--size-icon: 1.5em;
 
 	--size-sm: calc(var(--size-text) / var(--typescale));
-	--size-tiny: calc(var(--size-small) / var(--typescale));
+	--size-tiny: calc(var(--size-sm) / var(--typescale));
 
 	--size-large: calc(var(--size-text) * var(--typescale));
 	--size-h5: calc(var(--size-text) * var(--typescale));

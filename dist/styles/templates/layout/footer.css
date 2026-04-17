@@ -95,61 +95,77 @@
   --border-rad: 5px;
 }
 
-.d-flex {
-  display: flex;
+footer {
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  gap: var(--gutter);
+  padding: 2em var(--margin);
+  background-color: var(--bg-darkest);
+}
+footer div:first-of-type {
+  grid-column: 1/4;
+  grid-column: span 4;
+  grid-row: 2;
+}
+@media only screen and (min-width: 36em) {
+  footer div:first-of-type {
+    grid-row: auto;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 48em) {
+  footer div:first-of-type {
+    grid-column: 1/6;
+  }
+}
+@media only screen and (min-width: 62em) {
+  footer div:first-of-type {
+    grid-column-start: 2;
+  }
+}
+footer div:first-of-type > img {
+  height: 8em;
+  width: 8em;
+  order: 1;
+}
+@media only screen and (min-width: 36em) {
+  footer div:first-of-type > img {
+    order: unset;
+  }
+}
+footer div:first-of-type ul button img {
+  height: calc(1em * var(--typescale));
+  aspect-ratio: 1/1;
+}
+footer div:last-of-type {
+  grid-column: 1/4;
+}
+@media only screen and (min-width: 36em) {
+  footer div:last-of-type {
+    grid-column: 5/8;
+  }
+}
+@media only screen and (min-width: 48em) {
+  footer div:last-of-type {
+    grid-column: 7/12;
+  }
+}
+@media only screen and (min-width: 62em) {
+  footer div:last-of-type {
+    grid-column-end: 11;
+  }
+}
+footer div:last-of-type ul a {
+  font-size: var(--size-sm);
+}
+@media only screen and (min-width: 48em) {
+  footer div:last-of-type ul a {
+    font-size: unset;
+  }
+}
+footer div:last-of-type ul img {
+  height: 1.25em;
+  aspect-ratio: 1/1;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.align-stretch {
-  align-items: stretch;
-}
-
-.gap-025 {
-  gap: 0.25em;
-}
-
-.gap-05 {
-  gap: 0.5em;
-}
-
-.gap-075 {
-  gap: 0.75em;
-}
-
-.gap-2 {
-  gap: 2em;
-}
-
-.self-stretch {
-  align-self: stretch;
-}
-
-.grow-1 {
-  flex-grow: 1;
-}
-
-/*# sourceMappingURL=flexbox.css.map */
+/*# sourceMappingURL=footer.css.map */
