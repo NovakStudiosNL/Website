@@ -95,73 +95,20 @@
   --border-rad: 5px;
 }
 
-p,
-a,
-button,
-li {
-  font-family: var(--font-text);
-  font-size: var(--text-size);
-  color: var(--text);
+.mx-1 {
+  margin: 0 1em;
 }
 
-.xl,
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-family: var(--font-h);
-  color: var(--text);
+.my-2 {
+  margin: 2em 0;
 }
 
-.xl {
-  font-size: var(--size-xl);
+.mb-1 {
+  margin-bottom: 1em;
 }
 
-h1,
-.h1 {
-  font-size: var(--size-h1);
+.page-p {
+  padding: 0 var(--margin);
 }
 
-h2,
-.h2 {
-  font-size: var(--size-h2);
-}
-
-h3,
-.h3 {
-  font-size: var(--size-h3);
-}
-
-h4,
-.h4 {
-  font-size: var(--size-h4);
-}
-
-h5,
-.h5 {
-  font-size: var(--size-h5);
-}
-
-.small {
-  font-size: var(--size-sm);
-}
-
-.tiny {
-  font-size: var(--size-tiny);
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/*# sourceMappingURL=text.css.map */
+/*# sourceMappingURL=box-model.css.map */

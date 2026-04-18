@@ -1,15 +1,20 @@
 @forward './root.scss';
 
+@forward './globals/box-model.scss';
 @forward './globals/btn.scss';
+@forward './globals/card.scss';
 @forward './globals/flexbox.scss';
 @forward './globals/icon.scss';
 @forward './globals/layout.scss';
 @forward './globals/link.scss';
 @forward './globals/list.scss';
+@forward './globals/size.scss';
 @forward './globals/text.scss';
 
 @forward './templates/layout/footer.scss';
 @forward './templates/layout/header.scss';
+
+@forward './templates/cards/project.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');

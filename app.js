@@ -97,6 +97,8 @@ function render(page = {}) {
 		'src/templates/layout/head.hbs',
 		'src/templates/layout/header.hbs',
 		'src/templates/layout/footer.hbs',
+		'src/templates/pages/index.hbs',
+		'src/templates/cards/project.hbs',
 	])
 	await initI18n()
 })()

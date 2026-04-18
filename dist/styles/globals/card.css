@@ -95,73 +95,18 @@
   --border-rad: 5px;
 }
 
-p,
-a,
-button,
-li {
-  font-family: var(--font-text);
-  font-size: var(--text-size);
-  color: var(--text);
+.card {
+  background-color: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+.card:hover {
+  cursor: pointer;
+  background-color: var(--bg-light);
+  box-shadow: var(--shadow-md);
+}
+.card > img {
+  height: 16em;
+  object-fit: cover;
 }
 
-.xl,
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-family: var(--font-h);
-  color: var(--text);
-}
-
-.xl {
-  font-size: var(--size-xl);
-}
-
-h1,
-.h1 {
-  font-size: var(--size-h1);
-}
-
-h2,
-.h2 {
-  font-size: var(--size-h2);
-}
-
-h3,
-.h3 {
-  font-size: var(--size-h3);
-}
-
-h4,
-.h4 {
-  font-size: var(--size-h4);
-}
-
-h5,
-.h5 {
-  font-size: var(--size-h5);
-}
-
-.small {
-  font-size: var(--size-sm);
-}
-
-.tiny {
-  font-size: var(--size-tiny);
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/*# sourceMappingURL=text.css.map */
+/*# sourceMappingURL=card.css.map */

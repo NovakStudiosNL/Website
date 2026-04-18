@@ -1,0 +1,18 @@
+@use '../root' as *;
+
+.card {
+	background-color: var(--bg);
+
+	box-shadow: var(--shadow-sm);
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--bg-light);
+		box-shadow: var(--shadow-md);
+	}
+
+	> img {
+		height: 16em;
+		object-fit: cover;
+	}
+}
