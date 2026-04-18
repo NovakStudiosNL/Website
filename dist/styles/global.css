@@ -97,6 +97,7 @@
   	0 8px 10px 0 rgba(var(--bg-darkest), 0.3),
   	0 8px 12px 0 rgba(var(--bg-darkest), 0.15);
   --border-rad: 5px;
+  --trans-speed: 200ms;
 }
 
 .mx-1 {
@@ -124,6 +125,7 @@
   font-size: var(--size-h5);
   background-color: var(--primary);
   color: var(--bg);
+  transition: var(--trans-speed);
 }
 .btn-primary:hover {
   cursor: pointer;
@@ -134,6 +136,7 @@
 .no-btn {
   background: none;
   border: none;
+  transition: var(--trans-speed);
 }
 .no-btn:hover {
   cursor: pointer;
@@ -143,6 +146,7 @@
 .card {
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
+  transition: var(--trans-speed);
 }
 .card:hover {
   cursor: pointer;
@@ -433,6 +437,7 @@ header nav .logo svg {
   height: 2.7em;
   width: auto;
   fill: var(--text-muted);
+  transition: var(--trans-speed);
 }
 header nav .logo svg:hover {
   cursor: pointer;
@@ -455,6 +460,7 @@ header nav ul .header-link {
   text-decoration: none;
   color: var(--text-muted);
   text-align: center;
+  transition: var(--trans-speed);
 }
 header nav ul .header-link.active, header nav ul .header-link:hover {
   color: var(--text);

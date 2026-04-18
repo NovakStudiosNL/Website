@@ -98,6 +98,7 @@
 .card {
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
+  transition: var(--trans-speed);
 }
 .card:hover {
   cursor: pointer;

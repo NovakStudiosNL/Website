@@ -93,6 +93,7 @@
   	0 8px 10px 0 rgba(var(--bg-darkest), 0.3),
   	0 8px 12px 0 rgba(var(--bg-darkest), 0.15);
   --border-rad: 5px;
+  --trans-speed: 200ms;
 }
 
 ul {
