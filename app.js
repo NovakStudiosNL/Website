@@ -4,6 +4,22 @@ const BASE_PATH =
 		: '/Website'
 let layoutTemplate
 
+function registerHelpers() {
+	Handlebars.registerHelper('isActive', (string, condition) =>
+		string === condition ? 'active' : '',
+	)
+
+	Handlebars.registerHelper('tVariables', function (string, options) {
+		const vars = options.hash || {}
+
+		Object.keys(vars).forEach((key) => {
+			string = string.replace('${' + key + '}', String(vars[key]))
+		})
+
+		return i18next.t(string)
+	})
+}
+
 async function loadLayout() {
 	const res = await fetch(`${BASE_PATH}/src/templates/layout.hbs`)
 	const source = await res.text()
@@ -46,20 +62,41 @@ function changeLanguage(lang) {
 	loadLanguage(lang)
 }
 
-async function renderPage(name) {
-	const pagesRes = await fetch(`${BASE_PATH}/dist/pages.json`)
-	const pages = await pagesRes.json()
+async function fetchMetadata() {
+	const manifest = await fetch(`${BASE_PATH}/dist/metadata/manifest.json`)
+	const files = await manifest.json()
 
-	const page = pages[name]
+	const data = await Promise.all(
+		files['metadata_files'].map((fileName) =>
+			fetch(`${BASE_PATH}/dist/metadata/${fileName}.json`).then((res) =>
+				res.json(),
+			),
+		),
+	)
+
+	const metadata = {}
+	files['metadata_files'].forEach(
+		(file, iteration) =>
+			(metadata[file.replace('.json', '')] = data[iteration]),
+	)
+
+	return metadata
+}
+
+async function renderPage(name) {
+	const metadata = await fetchMetadata()
+
+	const page = metadata.pages[name]
 
 	const res = await fetch(`${BASE_PATH}/${page.template}`)
 	const source = await res.text()
-	console.log(`${BASE_PATH}/${page.template}`)
 
 	const template = Handlebars.compile(source)
 
 	const body = template({
 		t: (key) => i18next.t(key),
+		projects: metadata.projects || {},
+		team: metadata.team || {},
 	})
 
 	render({
@@ -89,9 +126,8 @@ function render(page = {}) {
 
 // Init app
 ;(async function () {
-	Handlebars.registerHelper('isActive', (string, condition) =>
-		string === condition ? 'active' : '',
-	)
+	registerHelpers()
+
 	await loadLayout()
 	await loadPartials([
 		'src/templates/layout/head.hbs',
@@ -99,6 +135,7 @@ function render(page = {}) {
 		'src/templates/layout/footer.hbs',
 		'src/templates/pages/index.hbs',
 		'src/templates/cards/project.hbs',
+		'src/templates/cards/team.hbs',
 	])
 	await initI18n()
 })()

@@ -175,7 +175,7 @@ const buildTranslations = () => {
 		fs.writeFileSync(
 			path.join(
 				__dirname.substring(0, __dirname.lastIndexOf('/')),
-				'public',
+				'dist',
 				'locales',
 				`${lng}.json`,
 			),

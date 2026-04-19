@@ -6,6 +6,7 @@ $xl: 75em;
 
 :root {
 	// BREAKPOINTS
+	--xs: 22em;
 	--sm: 36em;
 	--md: 48em;
 	--lg: 62em;
@@ -24,22 +25,30 @@ $xl: 75em;
 		--margin: 4em;
 	}
 
-	--max-width-xs: calc(var(--xs) - (var(--margin-xs) * 2));
-	--max-width-sm: calc(var(--sm) - (var(--margin) * 2));
-	--max-width-md: calc(var(--md) - (var(--margin) * 2));
-	--max-width-lg: calc(var(--lg) - (var(--margin) * 2));
-	--max-width-xl: calc(var(--xl) - (var(--margin) * 2));
+	--max-width: calc(var(--xs) - (var(--margin) * 2));
+	@media only screen and (min-width: $sm) {
+		--max-width: calc(var(--sm) - (var(--margin) * 2));
+	}
+	@media only screen and (min-width: $md) {
+		--max-width: calc(var(--md) - (var(--margin) * 2));
+	}
+	@media only screen and (min-width: $lg) {
+		--max-width: calc(var(--lg) - (var(--margin) * 2));
+	}
+	@media only screen and (min-width: $xl) {
+		--max-width: calc(var(--xl) - (var(--margin) * 2));
+	}
 
 	--gutter: 1em;
 
 	// TYPOGRAPHY
 	// Font styles
 	--font-h:
-		'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova',
-		'Nimbus Sans', Arial, system-ui, sans-serif;
+		'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+		system-ui, sans-serif;
 	--font-text:
-		'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans',
-		Arial, system-ui, sans-serif;
+		'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+		system-ui, sans-serif;
 
 	// Font sizes
 	--typescale: 1.125;

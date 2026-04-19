@@ -1,0 +1,20 @@
+{
+	"highlighted_3": ["energy_case", "bordscape", "sei_leiferser"],
+	"cards": {
+		"energy_case": {
+			"locale_file": "energy_case",
+			"img_src": "src/img/cards/projects/energy_case.png",
+			"company_src": "src/img/logos/novak_full.png"
+		},
+		"bordscape": {
+			"locale_file": "bordscape",
+			"img_src": "src/img/cards/projects/bordscape.png",
+			"company_src": "src/img/logos/spellenwereld_small.png"
+		},
+		"sei_leiferser": {
+			"locale_file": "sei_leiferser",
+			"img_src": "src/img/cards/projects/sei_leiferser.png",
+			"company_src": "src/img/logos/dolomiti.png"
+		}
+	}
+}

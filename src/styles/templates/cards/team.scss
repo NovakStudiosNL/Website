@@ -1,0 +1,12 @@
+@use '../../root' as *;
+
+.card.team {
+	&:hover {
+		background-color: var(--bg);
+		box-shadow: var(--shadow-sm);
+	}
+
+	& > img {
+		height: 14em;
+	}
+}

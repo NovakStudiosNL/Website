@@ -1,7 +1,6 @@
 @use '../../root' as *;
 
 .logo-img {
-	width: 4em;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
+	height: 4em;
+	object-fit: contain;
 }

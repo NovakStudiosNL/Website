@@ -1,0 +1,9 @@
+@use '../root' as *;
+
+.d-grid {
+	display: grid;
+}
+
+.fr-3 {
+	grid-template-columns: repeat(3, 1fr);
+}

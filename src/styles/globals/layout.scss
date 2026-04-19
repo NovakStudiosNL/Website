@@ -10,21 +10,5 @@ body {
 }
 
 .max-width {
-	max-width: var(--max-width-xs);
-
-	@media only screen and (min-width: $sm) {
-		max-width: var(--max-width-sm);
-	}
-
-	@media only screen and (min-width: $md) {
-		max-width: var(--max-width-md);
-	}
-
-	@media only screen and (min-width: $lg) {
-		max-width: var(--max-width-lg);
-	}
-
-	@media only screen and (min-width: $xl) {
-		max-width: var(--max-width-xl);
-	}
+	max-width: var(--max-width);
 }

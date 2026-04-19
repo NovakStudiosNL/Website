@@ -1,0 +1,55 @@
+{
+	"members": ["jeremy", "bjorn", "maxim", "lorenzo", "kris"],
+	"cards": {
+		"jeremy": {
+			"img_src": "src/img/cards/team/jeremy.png",
+			"linkedin": "link",
+			"email": "link",
+			"itchio": "link",
+			"artstation": "link",
+			"bluesky": "link",
+			"discord": "link",
+			"porfolio": ""
+		},
+		"bjorn": {
+			"img_src": "src/img/cards/team/bjorn.png",
+			"linkedin": "link",
+			"email": "link",
+			"itchio": "link",
+			"artstation": "link",
+			"bluesky": "link",
+			"discord": "link",
+			"porfolio": ""
+		},
+		"maxim": {
+			"img_src": "src/img/cards/team/maxim.png",
+			"linkedin": "link",
+			"email": "link",
+			"itchio": "link",
+			"artstation": "link",
+			"bluesky": "link",
+			"discord": "link",
+			"porfolio": ""
+		},
+		"lorenzo": {
+			"img_src": "src/img/cards/team/lorenzo.png",
+			"linkedin": "link",
+			"email": "link",
+			"itchio": "link",
+			"artstation": "link",
+			"bluesky": "link",
+			"discord": "link",
+			"porfolio": ""
+		},
+		"kris": {
+			"img_src": "src/img/cards/team/kris.png",
+			"linkedin": "link",
+			"email": "link",
+			"itchio": "link",
+			"artstation": "link",
+			"bluesky": "link",
+			"discord": "link",
+			"porfolio": ""
+		}
+	}
+}

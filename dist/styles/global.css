@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
+  --xs: 22em;
   --sm: 36em;
   --md: 48em;
   --lg: 62em;
@@ -28,18 +29,36 @@
   }
 }
 :root {
-  --max-width-xs: calc(var(--xs) - (var(--margin-xs) * 2));
-  --max-width-sm: calc(var(--sm) - (var(--margin) * 2));
-  --max-width-md: calc(var(--md) - (var(--margin) * 2));
-  --max-width-lg: calc(var(--lg) - (var(--margin) * 2));
-  --max-width-xl: calc(var(--xl) - (var(--margin) * 2));
+  --max-width: calc(var(--xs) - (var(--margin) * 2));
+}
+@media only screen and (min-width: 36em) {
+  :root {
+    --max-width: calc(var(--sm) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --max-width: calc(var(--md) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 62em) {
+  :root {
+    --max-width: calc(var(--lg) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 75em) {
+  :root {
+    --max-width: calc(var(--xl) - (var(--margin) * 2));
+  }
+}
+:root {
   --gutter: 1em;
   --font-h:
-  	'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova',
-  	'Nimbus Sans', Arial, system-ui, sans-serif;
+  	'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+  	system-ui, sans-serif;
   --font-text:
-  	'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans',
-  	Arial, system-ui, sans-serif;
+  	'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+  	system-ui, sans-serif;
   --typescale: 1.125;
 }
 @media only screen and (min-width: 48em) {
@@ -144,12 +163,12 @@
 }
 
 .card {
+  min-width: 16em;
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
   transition: var(--trans-speed);
 }
 .card:hover {
-  cursor: pointer;
   background-color: var(--bg-light);
   box-shadow: var(--shadow-md);
 }
@@ -187,6 +206,10 @@
   align-items: center;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
 .align-stretch {
   align-items: stretch;
 }
@@ -219,6 +242,14 @@
   flex-grow: 1;
 }
 
+.d-grid {
+  display: grid;
+}
+
+.fr-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .material-icon {
   font-family: "Material Icons";
   font-size: var(--size-icon);
@@ -234,31 +265,27 @@ body {
 }
 
 .max-width {
-  max-width: var(--max-width-xs);
-}
-@media only screen and (min-width: 36em) {
-  .max-width {
-    max-width: var(--max-width-sm);
-  }
-}
-@media only screen and (min-width: 48em) {
-  .max-width {
-    max-width: var(--max-width-md);
-  }
-}
-@media only screen and (min-width: 62em) {
-  .max-width {
-    max-width: var(--max-width-lg);
-  }
-}
-@media only screen and (min-width: 75em) {
-  .max-width {
-    max-width: var(--max-width-xl);
-  }
+  max-width: var(--max-width);
 }
 
 a {
   text-decoration: none;
+}
+
+.social-link {
+  height: 1em;
+  width: 1em;
+  transition: var(--trans-speed);
+}
+.social-link svg {
+  fill: var(--text);
+  transition: var(--trans-speed);
+}
+.social-link:hover {
+  transform: scale(1.2);
+}
+.social-link:hover svg {
+  fill: var(--text-muted);
 }
 
 ul {
@@ -336,6 +363,10 @@ h5,
 
 .text-right {
   text-align: right;
+}
+
+.color-primary {
+  color: var(--primary);
 }
 
 footer {
@@ -512,9 +543,20 @@ header nav .btn-primary {
 }
 
 .logo-img {
-  width: 4em;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  height: 4em;
+  object-fit: contain;
+}
+
+.card.team:hover {
+  background-color: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+.card.team > img {
+  height: 14em;
+}
+
+#projects > div {
+  overflow-x: scroll;
 }
 
 /*# sourceMappingURL=global.css.map */

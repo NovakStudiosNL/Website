@@ -3,3 +3,22 @@
 a {
 	text-decoration: none;
 }
+
+.social-link {
+	height: 1em;
+	width: 1em;
+	transition: var(--trans-speed);
+
+	svg {
+		fill: var(--text);
+		transition: var(--trans-speed);
+	}
+
+	&:hover {
+		transform: scale(1.2);
+
+		svg {
+			fill: var(--text-muted);
+		}
+	}
+}

@@ -1,3 +1,5 @@
 {
-	"greeting": "Hey!"
+	"projects": {
+		"heading": "Projects"
+	}
 }

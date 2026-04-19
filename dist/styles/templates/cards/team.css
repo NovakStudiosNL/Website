@@ -1,0 +1,126 @@
+:root {
+  --xs: 22em;
+  --sm: 36em;
+  --md: 48em;
+  --lg: 62em;
+  --xl: 75em;
+  --col: 4;
+}
+@media only screen and (min-width: 36em) {
+  :root {
+    --col: 8;
+  }
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --col: 12;
+  }
+}
+:root {
+  --margin: 2em;
+}
+@media only screen and (min-width: 30em) {
+  :root {
+    --margin: 4em;
+  }
+}
+:root {
+  --max-width: calc(var(--xs) - (var(--margin) * 2));
+}
+@media only screen and (min-width: 36em) {
+  :root {
+    --max-width: calc(var(--sm) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --max-width: calc(var(--md) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 62em) {
+  :root {
+    --max-width: calc(var(--lg) - (var(--margin) * 2));
+  }
+}
+@media only screen and (min-width: 75em) {
+  :root {
+    --max-width: calc(var(--xl) - (var(--margin) * 2));
+  }
+}
+:root {
+  --gutter: 1em;
+  --font-h:
+  	'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+  	system-ui, sans-serif;
+  --font-text:
+  	'Montserrat', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
+  	system-ui, sans-serif;
+  --typescale: 1.125;
+}
+@media only screen and (min-width: 48em) {
+  :root {
+    --typescale: 1.333;
+  }
+}
+:root {
+  --size-text: 16px;
+  --size-icon: 1.5em;
+  --size-sm: calc(var(--size-text) / var(--typescale));
+  --size-tiny: calc(var(--size-sm) / var(--typescale));
+  --size-large: calc(var(--size-text) * var(--typescale));
+  --size-h5: calc(var(--size-text) * var(--typescale));
+  --size-h4: calc(var(--size-h5) * var(--typescale));
+  --size-h3: calc(var(--size-h4) * var(--typescale));
+  --size-h2: calc(var(--size-h3) * var(--typescale));
+  --size-h1: calc(var(--size-h2) * var(--typescale));
+  --size-xl: calc(var(--size-h1) * var(--typescale));
+  --text: #f0e9e0;
+  --bg: #3a1943;
+  --primary: #e39535;
+  --secondary: #7b2a7c;
+  --accent: #4c2f9d;
+  --disabled: #333234;
+  --danger: #801a1a;
+  --warning: #e4d854;
+  --success: #24591f;
+  --info: #19437c;
+  --text-muted: hsl(from var(--text) h calc(s - 20) calc(l - 20));
+  --bg-dark: hsl(from var(--bg) h s calc(l - 5));
+  --primary-dark: hsl(from var(--primary) h s calc(l - 5));
+  --secondary-dark: hsl(from var(--secondary) h s calc(l - 5));
+  --accent-dark: hsl(from var(--accent) h s calc(l - 5));
+  --bg-darkest: hsl(from var(--bg) h s calc(l - 10));
+  --primary-darkest: hsl(from var(--primary) h s calc(l - 10));
+  --secondary-darkest: hsl(from var(--secondary) h s calc(l - 10));
+  --accent-darkest: hsl(from var(--accent) h s calc(l - 10));
+  --bg-light: hsl(from var(--bg) h s calc(l + 5));
+  --primary-light: hsl(from var(--primary) h s calc(l + 5));
+  --secondary-light: hsl(from var(--secondary) h s calc(l + 5));
+  --accent-light: hsl(from var(--accent) h s calc(l + 5));
+  --bg-lightest: hsl(from var(--bg) h s calc(l + 10));
+  --primary-lightest: hsl(from var(--primary) h s calc(l + 10));
+  --secondary-lightest: hsl(from var(--secondary) h s calc(l + 10));
+  --accent-lightest: hsl(from var(--accent) h s calc(l + 10));
+  --shadow-color-30: color-mix(in srgb, var(--bg-darkest) 30%, transparent);
+  --shadow-color-15: color-mix(in srgb, var(--bg-darkest) 15%, transparent);
+  --shadow-sm:
+  	0 2px 4px 0 var(--shadow-color-30), 0 4px 6px 0 var(--shadow-color-15);
+  --shadow-md:
+  	0 6px 8px 0 rgba(var(--bg-darkest), 0.3),
+  	0 8px 10px 0 rgba(var(--bg-darkest), 0.15);
+  --shadow-lg:
+  	0 8px 10px 0 rgba(var(--bg-darkest), 0.3),
+  	0 8px 12px 0 rgba(var(--bg-darkest), 0.15);
+  --border-rad: 5px;
+  --trans-speed: 200ms;
+}
+
+.card.team:hover {
+  background-color: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+.card.team > img {
+  height: 14em;
+}
+
+/*# sourceMappingURL=team.css.map */
