@@ -9,6 +9,11 @@ a {
 	width: 1em;
 	transition: var(--trans-speed);
 
+	@media only screen and (min-width: $md) {
+		height: 1.5em;
+		width: 1.5em;
+	}
+
 	svg {
 		fill: var(--text);
 		transition: var(--trans-speed);

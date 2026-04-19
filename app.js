@@ -18,6 +18,8 @@ function registerHelpers() {
 
 		return i18next.t(string)
 	})
+
+	Handlebars.registerHelper('t', (key) => i18next.t(key))
 }
 
 async function loadLayout() {
@@ -98,6 +100,8 @@ async function renderPage(name) {
 		projects: metadata.projects || {},
 		team: metadata.team || {},
 	})
+
+	console.log(body)
 
 	render({
 		head: page.head,

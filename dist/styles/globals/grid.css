@@ -1,4 +1,5 @@
 :root {
+  --xs: 22em;
   --sm: 36em;
   --md: 48em;
   --lg: 62em;
@@ -26,22 +27,22 @@
 :root {
   --max-width: calc(var(--xs) - (var(--margin) * 2));
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 30em) {
   :root {
     --max-width: calc(var(--sm) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 36em) {
   :root {
     --max-width: calc(var(--md) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 48em) {
   :root {
     --max-width: calc(var(--lg) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 62em) {
   :root {
     --max-width: calc(var(--xl) - (var(--margin) * 2));
   }

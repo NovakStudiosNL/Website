@@ -26,16 +26,16 @@ $xl: 75em;
 	}
 
 	--max-width: calc(var(--xs) - (var(--margin) * 2));
-	@media only screen and (min-width: $sm) {
+	@media only screen and (min-width: $xs) {
 		--max-width: calc(var(--sm) - (var(--margin) * 2));
 	}
-	@media only screen and (min-width: $md) {
+	@media only screen and (min-width: $sm) {
 		--max-width: calc(var(--md) - (var(--margin) * 2));
 	}
-	@media only screen and (min-width: $lg) {
+	@media only screen and (min-width: $md) {
 		--max-width: calc(var(--lg) - (var(--margin) * 2));
 	}
-	@media only screen and (min-width: $xl) {
+	@media only screen and (min-width: $lg) {
 		--max-width: calc(var(--xl) - (var(--margin) * 2));
 	}
 

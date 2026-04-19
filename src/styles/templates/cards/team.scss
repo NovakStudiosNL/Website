@@ -1,6 +1,8 @@
 @use '../../root' as *;
 
 .card.team {
+	width: 21.5em;
+
 	&:hover {
 		background-color: var(--bg);
 		box-shadow: var(--shadow-sm);

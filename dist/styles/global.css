@@ -31,22 +31,22 @@
 :root {
   --max-width: calc(var(--xs) - (var(--margin) * 2));
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 30em) {
   :root {
     --max-width: calc(var(--sm) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 36em) {
   :root {
     --max-width: calc(var(--md) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 48em) {
   :root {
     --max-width: calc(var(--lg) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 62em) {
   :root {
     --max-width: calc(var(--xl) - (var(--margin) * 2));
   }
@@ -214,6 +214,10 @@
   align-items: stretch;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .gap-025 {
   gap: 0.25em;
 }
@@ -276,6 +280,12 @@ a {
   height: 1em;
   width: 1em;
   transition: var(--trans-speed);
+}
+@media only screen and (min-width: 48em) {
+  .social-link {
+    height: 1.5em;
+    width: 1.5em;
+  }
 }
 .social-link svg {
   fill: var(--text);
@@ -547,6 +557,9 @@ header nav .btn-primary {
   object-fit: contain;
 }
 
+.card.team {
+  width: 21.5em;
+}
 .card.team:hover {
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);

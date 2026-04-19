@@ -1,21 +1,26 @@
 <div class='card team d-flex flex-col gap-05'>
-
 	{{#if img_src}}
 		<img src='{{base}}{{img_src}}' />
 	{{/if}}
 
 	<div class='grow-1 d-flex flex-col gap-1 justify-between mx-1 mb-1'>
 		<div>
-			<h4>name</h4>
-			<p class='bold color-primary'>function</p>
+			<h4>{{tVariables
+					'cards.team.team.${member}.name'
+					member=locale_file
+				}}</h4>
+			<p class='bold color-primary'>{{tVariables
+					'cards.team.team.${member}.function'
+					member=locale_file
+				}}</p>
 		</div>
 
-		<div class='d-flex gap-075 justify-between align-center'>
-			<div class='d-flex gap-025'>
+		<div class='d-flex gap-075 center flex-wrap'>
+			<div class='grow-1 d-flex gap-05 center'>
 				{{#if linkedin}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{linkedin}}
+						href='{{linkedin}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -31,7 +36,7 @@
 				{{#if email}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{email}}
+						href='{{email}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 19' xmlns='http://www.w3.org/2000/svg'>
@@ -45,7 +50,7 @@
 				{{#if itchio}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{itchio}}
+						href='{{itchio}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 21' xmlns='http://www.w3.org/2000/svg'>
@@ -59,7 +64,7 @@
 				{{#if artstation}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{artstation}}
+						href='{{artstation}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 22' xmlns='http://www.w3.org/2000/svg'>
@@ -81,7 +86,7 @@
 				{{#if bluesky}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{bluesky}}
+						href='{{bluesky}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 21' xmlns='http://www.w3.org/2000/svg'>
@@ -95,7 +100,7 @@
 				{{#if discord}}
 					<a
 						class='social-link d-flex center align-end'
-						href={{discord}}
+						href='{{discord}}'
 						target='_blank'
 					>
 						<svg viewBox='0 0 24 18' xmlns='http://www.w3.org/2000/svg'>
@@ -109,7 +114,11 @@
 				<a>
 				</a>
 			</div>
-			<a class='btn-primary' target='_blank'>portfolio</a>
+			{{#if porfolio}}
+				<a class='btn-primary' href='{{porfolio}}' target='_blank'>{{t
+						'cards.team.team.portfolio'
+					}}</a>
+			{{/if}}
 		</div>
 	</div>
 </div>
