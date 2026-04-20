@@ -1,7 +1,7 @@
 const BASE_PATH =
 	location.hostname == 'localhost' || location.hostname == '127.0.0.1'
 		? '/'
-		: '/Website'
+		: '/Website/'
 let layoutTemplate
 
 function registerHelpers() {
