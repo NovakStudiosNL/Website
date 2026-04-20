@@ -1,4 +1,5 @@
-#projects > div {
+#projects > div,
+#reviews > div {
   overflow-x: scroll;
 }
 

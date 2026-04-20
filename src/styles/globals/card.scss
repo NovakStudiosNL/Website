@@ -8,13 +8,14 @@
 	box-shadow: var(--shadow-sm);
 	transition: var(--trans-speed);
 
-	&:hover {
-		background-color: var(--bg-light);
-		box-shadow: var(--shadow-md);
-	}
-
 	> img {
 		height: 16em;
 		object-fit: cover;
 	}
+}
+
+a.card:hover {
+	cursor: pointer;
+	background-color: var(--bg-light);
+	box-shadow: var(--shadow-md);
 }

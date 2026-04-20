@@ -98,10 +98,9 @@ async function renderPage(name) {
 	const body = template({
 		t: (key) => i18next.t(key),
 		projects: metadata.projects || {},
+		reviews: metadata.reviews || {},
 		team: metadata.team || {},
 	})
-
-	console.log(body)
 
 	render({
 		head: page.head,
@@ -137,8 +136,11 @@ function render(page = {}) {
 		'src/templates/layout/head.hbs',
 		'src/templates/layout/header.hbs',
 		'src/templates/layout/footer.hbs',
+
 		'src/templates/pages/index.hbs',
+
 		'src/templates/cards/project.hbs',
+		'src/templates/cards/review.hbs',
 		'src/templates/cards/team.hbs',
 	])
 	await initI18n()

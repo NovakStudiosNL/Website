@@ -1,0 +1,13 @@
+@use '../../root' as *;
+
+.card.review {
+	background: var(--grad-prim-l-prim-d);
+
+	svg {
+		fill: var(--bg-darkest);
+	}
+
+	p {
+		color: var(--bg-darkest);
+	}
+}

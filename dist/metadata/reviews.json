@@ -1,0 +1,14 @@
+{
+	"highlighted_3": ["petra", "henriet", "iluiia"],
+	"cards": {
+		"petra": {
+			"locale_file": "petra"
+		},
+		"henriet": {
+			"locale_file": "henriet"
+		},
+		"iluiia": {
+			"locale_file": "iluiia"
+		}
+	}
+}

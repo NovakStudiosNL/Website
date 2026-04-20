@@ -101,6 +101,10 @@
   --primary-lightest: hsl(from var(--primary) h s calc(l + 10));
   --secondary-lightest: hsl(from var(--secondary) h s calc(l + 10));
   --accent-lightest: hsl(from var(--accent) h s calc(l + 10));
+  --grad-prim-l-prim-d: linear-gradient(
+  	var(--primary-light),
+  	var(--primary-dark)
+  );
   --shadow-color-30: color-mix(in srgb, var(--bg-darkest) 30%, transparent);
   --shadow-color-15: color-mix(in srgb, var(--bg-darkest) 15%, transparent);
   --shadow-sm:
@@ -125,6 +129,10 @@
 
 .mb-1 {
   margin-bottom: 1em;
+}
+
+.p-1 {
+  padding: 1em;
 }
 
 .page-p {

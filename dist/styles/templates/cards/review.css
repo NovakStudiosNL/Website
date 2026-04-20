@@ -119,15 +119,14 @@
   --trans-speed: 200ms;
 }
 
-.card.team {
-  width: 21.5em;
+.card.review {
+  background: var(--grad-prim-l-prim-d);
 }
-.card.team:hover {
-  background-color: var(--bg);
-  box-shadow: var(--shadow-sm);
+.card.review svg {
+  fill: var(--bg-darkest);
 }
-.card.team > img {
-  height: 14em;
+.card.review p {
+  color: var(--bg-darkest);
 }
 
-/*# sourceMappingURL=team.css.map */
+/*# sourceMappingURL=review.css.map */
