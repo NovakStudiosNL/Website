@@ -1,0 +1,14 @@
+@use '../../root' as *;
+
+.intro-text {
+	display: grid;
+	grid-template-columns: repeat(var(--col), 1fr);
+	gap: var(--gutter);
+
+	p {
+		grid-column: 1 / span var(--col);
+		@media only screen and (min-width: $sm) {
+			grid-column: 2 / span calc(var(--col) - 2);
+		}
+	}
+}

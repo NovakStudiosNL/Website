@@ -7,5 +7,14 @@
 		"header": {
 			"page": "index"
 		}
+	},
+	"team": {
+		"template": "src/templates/pages/team.hbs",
+		"head": {
+			"title": "Novak Studios | Meet The Team"
+		},
+		"header": {
+			"page": "team"
+		}
 	}
 }

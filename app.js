@@ -1,6 +1,6 @@
 const BASE_PATH =
 	location.hostname == 'localhost' || location.hostname == '127.0.0.1'
-		? ''
+		? '/'
 		: '/Website'
 let layoutTemplate
 
@@ -23,14 +23,14 @@ function registerHelpers() {
 }
 
 async function loadLayout() {
-	const res = await fetch(`${BASE_PATH}/src/templates/layout.hbs`)
+	const res = await fetch(`${BASE_PATH}src/templates/layout.hbs`)
 	const source = await res.text()
 	layoutTemplate = Handlebars.compile(source)
 }
 
 async function loadPartials(dirs = []) {
 	for (const dir of dirs) {
-		const res = await fetch(`${BASE_PATH}/${dir}`)
+		const res = await fetch(`${BASE_PATH}${dir}`)
 		const source = await res.text()
 		const name = dir.split('/').pop().replace('.hbs', '')
 
@@ -50,13 +50,17 @@ async function initI18n() {
 }
 
 async function loadLanguage(lang) {
-	const res = await fetch(`${BASE_PATH}/dist/locales/${lang}.json`)
+	const res = await fetch(`${BASE_PATH}dist/locales/${lang}.json`)
 	const translations = await res.json()
 
 	i18next.addResourceBundle(lang, 'translation', translations, true, true)
 	i18next.changeLanguage(lang)
 
-	renderPage('index')
+	const url = window.location.pathname
+	const page = url.split('/').at(-1)
+	const pageName = page.replace('.html', '')
+
+	renderPage(pageName)
 }
 
 // Language switch
@@ -65,12 +69,12 @@ function changeLanguage(lang) {
 }
 
 async function fetchMetadata() {
-	const manifest = await fetch(`${BASE_PATH}/dist/metadata/manifest.json`)
+	const manifest = await fetch(`${BASE_PATH}dist/metadata/manifest.json`)
 	const files = await manifest.json()
 
 	const data = await Promise.all(
 		files['metadata_files'].map((fileName) =>
-			fetch(`${BASE_PATH}/dist/metadata/${fileName}.json`).then((res) =>
+			fetch(`${BASE_PATH}dist/metadata/${fileName}.json`).then((res) =>
 				res.json(),
 			),
 		),
@@ -90,7 +94,7 @@ async function renderPage(name) {
 
 	const page = metadata.pages[name]
 
-	const res = await fetch(`${BASE_PATH}/${page.template}`)
+	const res = await fetch(`${BASE_PATH}${page.template}`)
 	const source = await res.text()
 
 	const template = Handlebars.compile(source)
@@ -138,6 +142,7 @@ function render(page = {}) {
 		'src/templates/layout/footer.hbs',
 
 		'src/templates/pages/index.hbs',
+		'src/templates/pages/team.hbs',
 
 		'src/templates/cards/project.hbs',
 		'src/templates/cards/review.hbs',

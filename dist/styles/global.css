@@ -597,4 +597,18 @@ header nav .btn-primary {
   overflow-x: scroll;
 }
 
+.intro-text {
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  gap: var(--gutter);
+}
+.intro-text p {
+  grid-column: 1/span var(--col);
+}
+@media only screen and (min-width: 36em) {
+  .intro-text p {
+    grid-column: 2/span calc(var(--col) - 2);
+  }
+}
+
 /*# sourceMappingURL=global.css.map */
