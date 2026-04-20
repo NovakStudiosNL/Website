@@ -123,6 +123,10 @@
   --trans-speed: 200ms;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .mx-1 {
   margin: 0 1em;
 }
