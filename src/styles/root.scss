@@ -120,11 +120,9 @@ $xl: 75em;
 	--shadow-sm:
 		0 2px 4px 0 var(--shadow-color-30), 0 4px 6px 0 var(--shadow-color-15);
 	--shadow-md:
-		0 6px 8px 0 rgba(var(--bg-darkest), 0.3),
-		0 8px 10px 0 rgba(var(--bg-darkest), 0.15);
+		0 6px 8px 0 var(--shadow-color-30), 0 8px 10px 0 var(--shadow-color-15);
 	--shadow-lg:
-		0 8px 10px 0 rgba(var(--bg-darkest), 0.3),
-		0 8px 12px 0 rgba(var(--bg-darkest), 0.15);
+		0 8px 10px 0 var(--shadow-color-30), 0 8px 12px 0 var(--shadow-color-15);
 
 	// BORDER RADIUS
 	--border-rad: 5px;
