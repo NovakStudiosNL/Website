@@ -101,6 +101,9 @@ async function renderPage(name) {
 
 	const body = template({
 		t: (key) => i18next.t(key),
+
+		base: BASE_PATH,
+
 		projects: metadata.projects || {},
 		reviews: metadata.reviews || {},
 		team: metadata.team || {},
