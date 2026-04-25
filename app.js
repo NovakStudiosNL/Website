@@ -60,7 +60,7 @@ async function loadLanguage(lang) {
 	const page = url.split('/').at(-1)
 	const pageName = page.replace('.html', '')
 
-	renderPage(pageName)
+	renderPage(pageName == '' ? 'index' : pageName)
 }
 
 // Language switch
