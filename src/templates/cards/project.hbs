@@ -1,6 +1,7 @@
 <a class='card project d-flex flex-col gap-1'>
+	<p>{{@root.base}}</p>
 	{{#if img_src}}
-		<img src='{{base}}{{img_src}}' />
+		<img src='{{@root.base}}{{img_src}}' />
 	{{/if}}
 
 	<div class='grow-1 d-flex flex-col gap-1 justify-between mx-1 mb-1'>
@@ -28,7 +29,7 @@
 			</div>
 
 			{{#if company_src}}
-				<img class='logo-img' src='{{base}}{{company_src}}' />
+				<img class='logo-img' src='{{@root.base}}{{company_src}}' />
 			{{/if}}
 		</div>
 	</div>
