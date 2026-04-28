@@ -111,6 +111,7 @@ async function renderPage(name) {
 
 	render({
 		head: page.head,
+		header: page.header,
 		body,
 	})
 }
