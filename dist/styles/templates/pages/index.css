@@ -179,4 +179,11 @@
   overflow: hidden;
 }
 
+#team img {
+  width: 100%;
+}
+#team p {
+  text-align: center;
+}
+
 /*# sourceMappingURL=index.css.map */

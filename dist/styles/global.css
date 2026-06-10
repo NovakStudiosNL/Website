@@ -721,6 +721,13 @@ header nav .btn-primary {
   overflow: hidden;
 }
 
+#team img {
+  width: 100%;
+}
+#team p {
+  text-align: center;
+}
+
 .intro-text {
   display: grid;
   grid-template-columns: repeat(var(--col), 1fr);
