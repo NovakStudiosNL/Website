@@ -118,7 +118,6 @@
 }
 
 .card {
-  min-width: 16em;
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
   transition: var(--trans-speed);

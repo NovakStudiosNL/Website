@@ -173,7 +173,6 @@ html {
 }
 
 .card {
-  min-width: 16em;
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
   transition: var(--trans-speed);
@@ -284,6 +283,10 @@ body {
   max-width: var(--max-width);
 }
 
+.bg-light {
+  background-color: var(--bg-light);
+}
+
 a {
   text-decoration: none;
 }
@@ -326,6 +329,7 @@ ul {
   align-items: stretch;
 }
 .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
   height: auto;
 }
 @media only screen and (min-width: 48em) {
@@ -599,6 +603,7 @@ header nav .btn-primary {
 }
 
 .card.project {
+  width: 100%;
   height: 100%;
 }
 .card.project .logo-img {

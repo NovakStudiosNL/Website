@@ -8,6 +8,7 @@
 		align-items: stretch;
 
 		.swiper-slide {
+			display: flex;
 			height: auto;
 
 			@media only screen and (min-width: $md) {

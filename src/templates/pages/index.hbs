@@ -1,33 +1,32 @@
-
-<section id='projects' class='max-width page-p d-flex flex-col my-2 gap-1 center'>
-	<h2>{{t 'pages.index.projects.heading'}}</h2>
-
-	<div class="swiper">
-		<div class="swiper-wrapper">
-			{{#each projects.highlighted_3}}
-				{{#with (lookup ../projects.cards this)}}
-					<div class="swiper-slide">{{> project}}</div>
-				{{/with}}
-			{{/each}}
+<section id='reviews' class='bg-light w-100 d-flex center'>
+	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
+		<h2>{{t 'pages.index.reviews.heading'}}</h2>
+		<div class="swiper reviews" data-class="reviews">
+			<div class="swiper-wrapper">
+				{{#each reviews.highlighted_3}}
+					{{#with (lookup ../reviews.cards this)}}
+						<div class="swiper-slide">{{> review}}</div>
+					{{/with}}
+				{{/each}}
+			</div>
 		</div>
+		<div class="swiper-pagination reviews-pagination"></div>
 	</div>
-		<div class="swiper-pagination"></div>
-	{{!-- <div class='d-grid fr-3 gap-1 w-100'>
-		{{#each projects.highlighted_3}}
-		{{#with (lookup ../projects.cards this)}}
-		{{> project}}
-		{{/with}}
-		{{/each}}
-	</div> --}}
 </section>
 
-<section id='reviews' class='max-width page-p d-flex flex-col my-2 gap-1 center'>
-	<h2>{{t 'pages.index.reviews.heading'}}</h2>
-	<div class='d-grid fr-3 gap-1 w-100'>
-		{{#each reviews.highlighted_3}}
-		{{#with (lookup ../reviews.cards this)}}
-		{{> review}}
-		{{/with}}
-		{{/each}}
+<section id='projects' class='w-100 d-flex center'>
+	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
+		<h2>{{t 'pages.index.projects.heading'}}</h2>
+
+		<div class="swiper projects" data-class="projects">
+			<div class="swiper-wrapper">
+				{{#each projects.highlighted_3}}
+					{{#with (lookup ../projects.cards this)}}
+						<div class="swiper-slide">{{> project}}</div>
+					{{/with}}
+				{{/each}}
+			</div>
+		</div>
+		<div class="swiper-pagination projects-pagination"></div>
 	</div>
 </section>

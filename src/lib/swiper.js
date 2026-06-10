@@ -1,20 +1,22 @@
-const swiperEl = document.querySelector('.swiper')
+const carousels = document.querySelectorAll('.swiper')
 
-if (swiperEl) {
-	const swiper = new Swiper('.swiper', {
-		slidesPerView: 'auto',
-		spaceBetween: 16,
+if (carousels.length > 0) {
+	carousels.forEach((carousel) => {
+		const swiper = new Swiper(`.${carousel.dataset.class}`, {
+			slidesPerView: 'auto',
+			spaceBetween: 16,
 
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-
-		breakpoints: {
-			[breaks.lg]: {
-				slidesPerView: 3,
+			pagination: {
+				el: `.${carousel.dataset.class}-pagination`,
+				type: 'bullets',
+				clickable: true,
 			},
-		},
+
+			breakpoints: {
+				[breaks.lg]: {
+					slidesPerView: 3,
+				},
+			},
+		})
 	})
 }
