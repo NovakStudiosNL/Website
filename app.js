@@ -121,6 +121,7 @@ async function renderPage(name) {
 		base: BASE_PATH,
 
 		projects: metadata.projects || {},
+		partners: metadata.partners || {},
 		reviews: metadata.reviews || {},
 		team: metadata.team || {},
 	})

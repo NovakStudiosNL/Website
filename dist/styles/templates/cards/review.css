@@ -118,6 +118,7 @@
 }
 
 .card.review {
+  width: 100%;
   background: var(--grad-prim-l-prim-d);
 }
 .card.review svg {

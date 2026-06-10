@@ -325,12 +325,23 @@ ul {
   width: 100%;
   overflow: visible;
 }
+.swiper.partners {
+  mask-image: linear-gradient(to right, transparent 0%, var(--bg-light) 10%, var(--bg-light) 90%, transparent 100%);
+}
 .swiper .swiper-wrapper {
   align-items: stretch;
+  gap: 1em;
+}
+.swiper .swiper-wrapper.partners {
+  justify-content: center;
+  transition-timing-function: linear;
 }
 .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   height: auto;
+}
+.swiper .swiper-wrapper .swiper-slide.partners {
+  width: fit-content;
 }
 @media only screen and (min-width: 48em) {
   .swiper .swiper-wrapper .swiper-slide {
@@ -612,6 +623,7 @@ header nav .btn-primary {
 }
 
 .card.review {
+  width: 100%;
   background: var(--grad-prim-l-prim-d);
 }
 .card.review svg {
@@ -630,6 +642,10 @@ header nav .btn-primary {
 }
 .card.team > img {
   height: 14em;
+}
+
+#partners {
+  overflow: hidden;
 }
 
 .intro-text {

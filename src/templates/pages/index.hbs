@@ -1,16 +1,25 @@
-<section id='reviews' class='bg-light w-100 d-flex center'>
-	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
-		<h2>{{t 'pages.index.reviews.heading'}}</h2>
-		<div class="swiper reviews" data-class="reviews">
-			<div class="swiper-wrapper">
-				{{#each reviews.highlighted_3}}
-					{{#with (lookup ../reviews.cards this)}}
-						<div class="swiper-slide">{{> review}}</div>
-					{{/with}}
+<section id='partners' class='bg-light w-100 d-flex center'>
+	<div class='w-100 page-p d-flex flex-col my-2 gap-1 center'>
+		<h2 class='max-width'>{{t 'pages.index.partners.heading'}}</h2>
+		<div class="swiper swiper-partners" data-class="partners">
+			<div class="swiper-wrapper partners">
+				{{#each partners}}
+						<a href='{{site}}' class="swiper-slide partners" target="_blank">
+							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
+						</a>
+				{{/each}}
+				{{#each partners}}
+						<a style="display:none;" href='{{site}}' class="swiper-slide partners extra" target="_blank">
+							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
+						</a>
+				{{/each}}
+				{{#each partners}}
+						<a style="display:none;" href='{{site}}' class="swiper-slide partners extra" target="_blank">
+							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
+						</a>
 				{{/each}}
 			</div>
 		</div>
-		<div class="swiper-pagination reviews-pagination"></div>
 	</div>
 </section>
 
@@ -18,7 +27,7 @@
 	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
 		<h2>{{t 'pages.index.projects.heading'}}</h2>
 
-		<div class="swiper projects" data-class="projects">
+		<div class="swiper swiper-projects" data-class="projects">
 			<div class="swiper-wrapper">
 				{{#each projects.highlighted_3}}
 					{{#with (lookup ../projects.cards this)}}
@@ -28,5 +37,21 @@
 			</div>
 		</div>
 		<div class="swiper-pagination projects-pagination"></div>
+	</div>
+</section>
+
+<section id='reviews' class='bg-light w-100 d-flex center'>
+	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
+		<h2>{{t 'pages.index.reviews.heading'}}</h2>
+		<div class="swiper swiper-reviews" data-class="reviews">
+			<div class="swiper-wrapper">
+				{{#each reviews.highlighted_3}}
+					{{#with (lookup ../reviews.cards this)}}
+						<div class="swiper-slide">{{> review}}</div>
+					{{/with}}
+				{{/each}}
+			</div>
+		</div>
+		<div class="swiper-pagination reviews-pagination"></div>
 	</div>
 </section>

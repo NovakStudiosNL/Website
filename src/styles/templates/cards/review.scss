@@ -1,6 +1,7 @@
 @use '../../root' as *;
 
 .card.review {
+	width: 100%;
 	background: var(--grad-prim-l-prim-d);
 
 	svg {

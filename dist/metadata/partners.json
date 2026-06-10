@@ -1,0 +1,17 @@
+{
+	"dolomiti": {
+		"site": "https://logosdolomiti.it/",
+		"img_src": "src/img/logos/dolomiti.png",
+		"img_height": 96
+	},
+	"hanze": {
+		"site": "https://www.hanze.nl/en",
+		"img_src": "src/img/logos/hanze.png",
+		"img_height": 90
+	},
+	"spellenwereld": {
+		"site": "https://spellenwereldassen.nl/",
+		"img_src": "src/img/logos/spellenwereld.png",
+		"img_height": 84
+	}
+}

@@ -4,12 +4,32 @@
 	width: 100%;
 	overflow: visible;
 
+	&.partners {
+		mask-image: linear-gradient(
+			to right,
+			transparent 0%,
+			var(--bg-light) 10%,
+			var(--bg-light) 90%,
+			transparent 100%
+		);
+	}
+
 	.swiper-wrapper {
 		align-items: stretch;
+		gap: 1em;
+
+		&.partners {
+			justify-content: center;
+			transition-timing-function: linear;
+		}
 
 		.swiper-slide {
 			display: flex;
 			height: auto;
+
+			&.partners {
+				width: fit-content;
+			}
 
 			@media only screen and (min-width: $md) {
 				width: 21.5em;
