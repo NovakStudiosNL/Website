@@ -134,6 +134,21 @@
   background-color: var(--primary-dark);
 }
 
+.btn-secondary {
+  display: block;
+  padding: 0.5em 1em;
+  border-radius: var(--border-rad);
+  font-family: var(--font-h);
+  font-size: var(--size-h5);
+  background-color: var(--secondary);
+  color: var(--bg);
+  transition: var(--trans-speed);
+}
+.btn-secondary:hover {
+  cursor: pointer;
+  background-color: var(--secondary-light);
+}
+
 .no-btn {
   background: none;
   border: none;
