@@ -105,8 +105,8 @@
   	var(--primary-light),
   	var(--primary-dark)
   );
-  --shadow-color-30: color-mix(in srgb, var(--bg-darkest) 30%, transparent);
-  --shadow-color-15: color-mix(in srgb, var(--bg-darkest) 15%, transparent);
+  --shadow-color-30: color-mix(in srgb, red 30%, transparent);
+  --shadow-color-15: color-mix(in srgb, red 15%, transparent);
   --shadow-sm:
   	0 2px 4px 0 var(--shadow-color-30), 0 4px 6px 0 var(--shadow-color-15);
   --shadow-md:
@@ -117,12 +117,33 @@
   --trans-speed: 200ms;
 }
 
-.card.project {
-  height: 100%;
+.swiper {
+  width: 100%;
+  overflow: visible;
 }
-.card.project .logo-img {
-  height: 4em;
-  object-fit: contain;
+.swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+@media only screen and (min-width: 48em) {
+  .swiper .swiper-wrapper .swiper-slide {
+    width: 21.5em;
+  }
 }
 
-/*# sourceMappingURL=project.css.map */
+.swiper-pagination {
+  position: relative;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  --size: 0.75em;
+  opacity: 0.75;
+  width: var(--size);
+  height: var(--size);
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primary);
+}
+
+/*# sourceMappingURL=swiper.css.map */

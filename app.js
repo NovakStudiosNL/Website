@@ -3,6 +3,22 @@ const BASE_PATH =
 		? '/'
 		: '/Website/'
 let layoutTemplate
+const breaks = {
+	// see root: em number * text-size number
+	xs: 30 * 16,
+	sm: 36 * 16,
+	md: 48 * 16,
+	lg: 62 * 16,
+	xl: 75 * 16,
+}
+
+function loadScript(fileName, isModule = false) {
+	const script = document.createElement('script')
+	script.src = `${BASE_PATH}src/lib/${fileName}.js`
+	if (isModule) script.type = 'module'
+	script.defer = true
+	document.body.appendChild(script)
+}
 
 function registerHelpers() {
 	Handlebars.registerHelper('isActive', (string, condition) =>
@@ -114,6 +130,8 @@ async function renderPage(name) {
 		header: page.header,
 		body,
 	})
+
+	loadScript('swiper')
 }
 
 // Render function

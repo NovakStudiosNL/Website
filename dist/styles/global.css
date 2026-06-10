@@ -29,24 +29,24 @@
   }
 }
 :root {
-  --max-width: calc(var(--xs) - (var(--margin) * 2));
+  --max-width: calc(100vw - (var(--margin) * 2));
 }
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 36em) {
   :root {
     --max-width: calc(var(--sm) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 48em) {
   :root {
     --max-width: calc(var(--md) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   :root {
     --max-width: calc(var(--lg) - (var(--margin) * 2));
   }
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 75em) {
   :root {
     --max-width: calc(var(--xl) - (var(--margin) * 2));
   }
@@ -318,6 +318,35 @@ ul {
   width: 100%;
 }
 
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+.swiper .swiper-wrapper {
+  align-items: stretch;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+@media only screen and (min-width: 48em) {
+  .swiper .swiper-wrapper .swiper-slide {
+    width: 21.5em;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  --size: 0.75em;
+  opacity: 0.75;
+  width: var(--size);
+  height: var(--size);
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primary);
+}
+
 p,
 a,
 button,
@@ -486,6 +515,7 @@ header {
   padding: 1em var(--margin);
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
+  z-index: 2;
 }
 header nav .logo {
   display: none;
@@ -568,7 +598,10 @@ header nav .btn-primary {
   }
 }
 
-.logo-img {
+.card.project {
+  height: 100%;
+}
+.card.project .logo-img {
   height: 4em;
   object-fit: contain;
 }
@@ -592,11 +625,6 @@ header nav .btn-primary {
 }
 .card.team > img {
   height: 14em;
-}
-
-#projects > div,
-#reviews > div {
-  overflow-x: scroll;
 }
 
 .intro-text {

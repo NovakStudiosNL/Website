@@ -1,6 +1,10 @@
 @use '../../root' as *;
 
-.logo-img {
-	height: 4em;
-	object-fit: contain;
+.card.project {
+	height: 100%;
+
+	.logo-img {
+		height: 4em;
+		object-fit: contain;
+	}
 }

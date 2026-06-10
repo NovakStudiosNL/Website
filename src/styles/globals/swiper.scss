@@ -1,0 +1,33 @@
+@use '../root' as *;
+
+.swiper {
+	width: 100%;
+	overflow: visible;
+
+	.swiper-wrapper {
+		align-items: stretch;
+
+		.swiper-slide {
+			height: auto;
+
+			@media only screen and (min-width: $md) {
+				width: 21.5em;
+			}
+		}
+	}
+}
+
+.swiper-pagination {
+	position: relative;
+
+	.swiper-pagination-bullet {
+		--size: 0.75em;
+		opacity: 0.75;
+		width: var(--size);
+		height: var(--size);
+
+		&.swiper-pagination-bullet-active {
+			background-color: var(--primary);
+		}
+	}
+}

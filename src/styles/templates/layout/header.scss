@@ -13,6 +13,8 @@ header {
 	background-color: var(--bg);
 	box-shadow: var(--shadow-sm);
 
+	z-index: 2;
+
 	nav {
 		.logo {
 			display: none;
