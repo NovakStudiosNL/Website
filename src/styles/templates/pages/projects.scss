@@ -1,0 +1,18 @@
+@use '../../root' as *;
+
+#page-projects {
+	section:last-of-type {
+		align-items: stretch;
+
+		.card {
+			height: unset;
+
+			@media only screen and (min-width: $md) {
+				width: calc((100% / var(--col)) * (var(--col) / 2) - var(--gutter) * 1);
+			}
+			@media only screen and (min-width: $lg) {
+				width: calc((100% / var(--col)) * (var(--col) / 3) - var(--gutter) * 2);
+			}
+		}
+	}
+}

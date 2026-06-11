@@ -25,5 +25,14 @@
 		"header": {
 			"page": "team"
 		}
+	},
+	"projects": {
+		"template": "src/templates/pages/projects.hbs",
+		"head": {
+			"title": "Novak Studios | Projects"
+		},
+		"header": {
+			"page": "projects"
+		}
 	}
 }

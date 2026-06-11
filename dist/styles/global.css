@@ -866,6 +866,23 @@ header nav .btn-primary {
   background-repeat: no-repeat;
 }
 
+#page-projects section:last-of-type {
+  align-items: stretch;
+}
+#page-projects section:last-of-type .card {
+  height: unset;
+}
+@media only screen and (min-width: 48em) {
+  #page-projects section:last-of-type .card {
+    width: calc(100% / var(--col) * var(--col) / 2 - var(--gutter) * 1);
+  }
+}
+@media only screen and (min-width: 62em) {
+  #page-projects section:last-of-type .card {
+    width: calc(100% / var(--col) * var(--col) / 3 - var(--gutter) * 2);
+  }
+}
+
 .intro-text {
   display: grid;
   grid-template-columns: repeat(var(--col), 1fr);
