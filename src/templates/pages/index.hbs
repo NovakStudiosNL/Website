@@ -1,83 +1,95 @@
-<section id="intro" class='w-100 d-flex center'>
-	<div class='max-width page-p d-flex flex-col my-2 gap-2 center'>
-		<div class='hero'>
+<section id="intro" class="w-100 d-flex center">
+	<div class="max-width page-p d-flex flex-col my-2 gap-2 center">
+		<div class="hero">
 			<h1>{{t 'pages.index.h1'}}</h1>
-			<img class='intro-logo' src='{{base}}src/img/logos/novak_primary_tilt.png'/>
+			<img
+				class="intro-logo"
+				src="{{base}}src/img/logos/novak_primary_tilt.png"
+			/>
 		</div>
 
-		<div class='tagline'>
+		<div class="tagline">
 			<p>{{t 'pages.index.tagline'}}</p>
 		</div>
 
-		<a class='btn-secondary'>{{t 'pages.index.cta-method'}}</a>
+		<a href="{{base}}src/pages/method.html" class="btn-secondary"
+			>{{t 'pages.index.cta-method'}}</a
+		>
 	</div>
 </section>
 
-<section id='partners' class='bg-light w-100 d-flex center'>
-	<div class='w-100 page-p d-flex flex-col my-2 gap-1 center'>
-		<h2 class='max-width'>{{t 'pages.index.partners.heading'}}</h2>
+<section id="partners" class="bg-light w-100 d-flex center">
+	<div class="w-100 page-p d-flex flex-col my-2 gap-1 center">
+		<h2 class="max-width">{{t 'pages.index.partners.heading'}}</h2>
 		<div class="swiper swiper-partners" data-class="partners">
 			<div class="swiper-wrapper partners">
 				{{#each partners}}
-						<a href='{{site}}' class="swiper-slide partners" target="_blank">
-							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
-						</a>
-				{{/each}}
-				{{#each partners}}
-						<a style="display:none;" href='{{site}}' class="swiper-slide partners extra" target="_blank">
-							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
-						</a>
-				{{/each}}
-				{{#each partners}}
-						<a style="display:none;" href='{{site}}' class="swiper-slide partners extra" target="_blank">
-							<img src='{{@root.base}}{{img_src}}' height='{{img_height}}'>
-						</a>
+				<a href="{{site}}" class="swiper-slide partners" target="_blank">
+					<img src="{{@root.base}}{{img_src}}" height="{{img_height}}" />
+				</a>
+				{{/each}} {{#each partners}}
+				<a
+					style="display: none"
+					href="{{site}}"
+					class="swiper-slide partners extra"
+					target="_blank"
+				>
+					<img src="{{@root.base}}{{img_src}}" height="{{img_height}}" />
+				</a>
+				{{/each}} {{#each partners}}
+				<a
+					style="display: none"
+					href="{{site}}"
+					class="swiper-slide partners extra"
+					target="_blank"
+				>
+					<img src="{{@root.base}}{{img_src}}" height="{{img_height}}" />
+				</a>
 				{{/each}}
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id='projects' class='w-100 d-flex center'>
-	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
+<section id="projects" class="w-100 d-flex center">
+	<div class="max-width page-p d-flex flex-col my-2 gap-1 center">
 		<h2>{{t 'pages.index.projects.heading'}}</h2>
 
 		<div class="swiper swiper-projects" data-class="projects">
 			<div class="swiper-wrapper">
-				{{#each projects.highlighted_3}}
-					{{#with (lookup ../projects.cards this)}}
-						<div class="swiper-slide">{{> project}}</div>
-					{{/with}}
-				{{/each}}
+				{{#each projects.highlighted_3}} {{#with (lookup ../projects.cards
+				this)}}
+				<div class="swiper-slide">{{> project}}</div>
+				{{/with}} {{/each}}
 			</div>
 		</div>
 		<div class="swiper-pagination projects-pagination"></div>
 	</div>
 </section>
 
-<section id='reviews' class='bg-light w-100 d-flex center'>
-	<div class='max-width page-p d-flex flex-col my-2 gap-1 center'>
+<section id="reviews" class="bg-light w-100 d-flex center">
+	<div class="max-width page-p d-flex flex-col my-2 gap-1 center">
 		<h2>{{t 'pages.index.reviews.heading'}}</h2>
 		<div class="swiper swiper-reviews" data-class="reviews">
 			<div class="swiper-wrapper">
-				{{#each reviews.highlighted_3}}
-					{{#with (lookup ../reviews.cards this)}}
-						<div class="swiper-slide">{{> review}}</div>
-					{{/with}}
-				{{/each}}
+				{{#each reviews.highlighted_3}} {{#with (lookup ../reviews.cards this)}}
+				<div class="swiper-slide">{{> review}}</div>
+				{{/with}} {{/each}}
 			</div>
 		</div>
 		<div class="swiper-pagination reviews-pagination"></div>
 	</div>
 </section>
 
-<section id="team" class='w-100 d-flex center'>
-	<div class='max-width page-p d-flex flex-col my-2 gap-2 center'>
+<section id="team" class="w-100 d-flex center">
+	<div class="max-width page-p d-flex flex-col my-2 gap-2 center">
 		<h2>{{t 'pages.index.h2-team'}}</h2>
-		<img src='{{base}}src/img/team.png'/>
+		<img src="{{base}}src/img/team.png" />
 
 		<p>{{t 'pages.index.team-intro'}}</p>
 
-		<a class='btn-primary'>{{t 'pages.index.cta-team'}}</a>
+		<a href="{{base}}src/pages/team.html" class="btn-primary"
+			>{{t 'pages.index.cta-team'}}</a
+		>
 	</div>
 </section>

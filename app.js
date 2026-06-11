@@ -166,6 +166,7 @@ function render(page = {}) {
 
 		'src/templates/pages/index.hbs',
 		'src/templates/pages/team.hbs',
+		'src/templates/pages/method.hbs',
 
 		'src/templates/cards/project.hbs',
 		'src/templates/cards/review.hbs',

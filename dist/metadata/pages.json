@@ -8,6 +8,15 @@
 			"page": "index"
 		}
 	},
+	"method": {
+		"template": "src/templates/pages/method.hbs",
+		"head": {
+			"title": "Novak Studios | Method"
+		},
+		"header": {
+			"page": "method"
+		}
+	},
 	"team": {
 		"template": "src/templates/pages/team.hbs",
 		"head": {
