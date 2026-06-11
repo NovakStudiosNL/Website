@@ -26,7 +26,15 @@
 			"img_files": "energy_case",
 			"hero_color": "#1C100E",
 			"hero_stroke": "2px solid #FFFFFF",
-			"hero_text_color": "#f0e9e0"
+			"hero_text_color": "#f0e9e0",
+			"video": "https://www.youtube.com/embed/GYTd0i-T6_8?si=qg1GjRSNsWasUHM0",
+			"btn_color": "#FFBC00",
+			"paragraphs": {
+				"paragraph_3": {
+					"btn_1": true,
+					"btn_2": true
+				}
+			}
 		},
 		"bordscape": {
 			"locale_file": "bordscape",
@@ -35,7 +43,14 @@
 			"collab_overlap": "",
 			"hero_color": "#91BEC3",
 			"hero_stroke": "2px solid #91BEC3",
-			"hero_text_color": "#3a1943"
+			"hero_text_color": "#3a1943",
+			"video": "https://www.youtube.com/embed/U04nc-TDkiE?si=8Edf-mW_kUTZOqyG",
+			"btn_color": "#91BEC3",
+			"paragraphs": {
+				"paragraph_3": {
+					"btn_1": true
+				}
+			}
 		},
 		"sei_leiferser": {
 			"locale_file": "sei_leiferser",
@@ -44,7 +59,8 @@
 			"collab_overlap": "overlap",
 			"hero_color": "#91C3A7",
 			"hero_stroke": "2px solid #91C3A7",
-			"hero_text_color": "#3a1943"
+			"hero_text_color": "#3a1943",
+			"paragraphs": {}
 		}
 	}
 }

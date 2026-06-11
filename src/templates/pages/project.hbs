@@ -6,11 +6,11 @@
 >
 	<section
 		id="hero"
-		style="background-color:{{project.hero_color}}; border-bottom:{{project.hero_stroke}};"
+		style="--hero-color:{{project.hero_color}}; --hero-border:{{project.hero_stroke}}; --hero-text-color: {{project.hero_text_color}};"
 		class="w-100 d-flex flex-col center"
 	>
 		<div class="max-width page-p d-flex flex-col my-2 gap-1">
-			<p style="color:{{project.hero_text_color}};" class="small">
+			<p class="small">
 				<span>
 					<a href="{{@root.base}}index.html" class="breadcrumb">Home</a>
 				</span>
@@ -30,9 +30,7 @@
 			<div class="cover {{project.collab_overlap}}">
 				{{#if project.collab}}
 				<div class="collab d-flex flex-col center">
-					<h5 style="color:{{project.hero_text_color}};">
-						In collaboration with:
-					</h5>
+					<h5>In collaboration with:</h5>
 					<img
 						src="{{@root.base}}src/img/projects/{{project.img_files }}/collab.png"
 					/>
@@ -45,17 +43,146 @@
 			</div>
 
 			<div class="d-flex flex-col gap-1 center">
-				<h3
-					style="color:{{project.hero_text_color}};"
-					class="upper text-center"
-				>
+				<h3 class="upper text-center">
 					{{tVariables 'pages.projects.${project}.tagline'
 					project=project.locale_file }}
 				</h3>
-				<p style="color:{{project.hero_text_color}};" class="text-center">
+				<p class="text-center">
 					{{tVariables 'pages.projects.${project}.description'
 					project=project.locale_file }}
 				</p>
+			</div>
+		</div>
+	</section>
+
+	{{#if project.video}}
+	<section id="video" class="w-100 d-flex flex-col center">
+		<div class="max-width page-p d-flex flex-col mt-2 gap-1">
+			<iframe width="526" height="296" src="{{project.video}}"></iframe>
+		</div>
+	</section>
+	{{/if}}
+
+	<section
+		id="blog"
+		style="--btn-color: {{project.btn_color}};"
+		class="w-100 d-flex flex-col center"
+	>
+		<div class="max-width page-p my-2">
+			<div class="paragraph d-flex gap-1">
+				<div class="text d-flex flex-col gap-2">
+					<div>
+						<h5>
+							{{tVariables
+							'pages.projects.${project}.article.paragraph_1.heading'
+							project=project.locale_file }}
+						</h5>
+						<p>
+							{{tVariables 'pages.projects.${project}.article.paragraph_1.text'
+							project=project.locale_file }}
+						</p>
+					</div>
+					<div class="d-flex flex-col gap-05">
+						{{#if project.paragraphs.paragraph_1.btn_1}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_1.btn_1'
+							project=project.locale_file }}</a
+						>
+						{{/if}} {{#if project.paragraphs.paragraph_1.btn_2}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_1.btn_2'
+							project=project.locale_file }}</a
+						>
+						{{/if}}
+					</div>
+				</div>
+
+				<div class="img">
+					<img
+						src="{{@root.base}}src/img/projects/{{project.img_files }}/paragraph1.png"
+					/>
+				</div>
+			</div>
+
+			<div class="paragraph d-flex gap-1">
+				<div class="img">
+					<img
+						src="{{@root.base}}src/img/projects/{{project.img_files }}/paragraph2.png"
+					/>
+				</div>
+
+				<div class="text d-flex flex-col gap-2">
+					<div>
+						<h5>
+							{{tVariables
+							'pages.projects.${project}.article.paragraph_2.heading'
+							project=project.locale_file }}
+						</h5>
+						<p>
+							{{tVariables 'pages.projects.${project}.article.paragraph_2.text'
+							project=project.locale_file }}
+						</p>
+					</div>
+					<div class="d-flex flex-col gap-05">
+						{{#if project.paragraphs.paragraph_2.btn_1}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_2.btn_1'
+							project=project.locale_file }}</a
+						>
+						{{/if}} {{#if project.paragraphs.paragraph_2.btn_2}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_2.btn_2'
+							project=project.locale_file }}</a
+						>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+
+			<h3 class="paragraph text-center">
+				{{tVariables 'pages.projects.${project}.article.tagline'
+				project=project.locale_file }}
+			</h3>
+
+			<div class="paragraph d-flex gap-1">
+				<div class="text d-flex flex-col gap-2">
+					<div>
+						<h5>
+							{{tVariables
+							'pages.projects.${project}.article.paragraph_3.heading'
+							project=project.locale_file }}
+						</h5>
+						<p>
+							{{tVariables 'pages.projects.${project}.article.paragraph_3.text'
+							project=project.locale_file }}
+						</p>
+					</div>
+					<div class="d-flex flex-col gap-05">
+						{{#if project.paragraphs.paragraph_3.btn_1}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_3.btn_1'
+							project=project.locale_file }}</a
+						>
+						{{/if}} {{#if project.paragraphs.paragraph_3.btn_2}}
+						<a class="btn-tertiary text-center"
+							>{{tVariables
+							'pages.projects.${project}.article.paragraph_3.btn_2'
+							project=project.locale_file }}</a
+						>
+						{{/if}}
+					</div>
+				</div>
+
+				<div class="img">
+					<img
+						src="{{@root.base}}src/img/projects/{{project.img_files }}/paragraph3.png"
+					/>
+				</div>
 			</div>
 		</div>
 	</section>

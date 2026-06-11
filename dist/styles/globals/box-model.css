@@ -129,6 +129,10 @@ html {
   margin: 2em 0;
 }
 
+.mt-2 {
+  margin-top: 2em;
+}
+
 .mb-1 {
   margin-bottom: 1em;
 }

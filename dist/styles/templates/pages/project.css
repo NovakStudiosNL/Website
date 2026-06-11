@@ -121,50 +121,96 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#project-page .cover.overlap {
+#project-page #hero {
+  background-color: var(--hero-color);
+  border-bottom: var(--hero-border);
+}
+#project-page #hero > div > p:first-of-type {
+  color: var(--hero-text-color);
+}
+#project-page #hero .cover.overlap {
   position: relative;
 }
 @media only screen and (min-width: 48em) {
-  #project-page .cover.overlap .collab {
+  #project-page #hero .cover.overlap .collab {
     position: absolute;
   }
 }
-#project-page .cover .collab {
+#project-page #hero .cover .collab {
   justify-self: center;
 }
 @media only screen and (min-width: 36em) {
-  #project-page .cover .collab {
+  #project-page #hero .cover .collab {
     width: fit-content;
     justify-self: flex-start;
   }
 }
 @media only screen and (min-width: 62em) {
-  #project-page .cover .collab {
+  #project-page #hero .cover .collab {
     margin: 0 4em;
   }
 }
-#project-page .cover .collab h5 {
+#project-page #hero .cover .collab h5 {
   opacity: 0.5;
+  color: var(--hero-text-color);
 }
-#project-page .cover .collab img {
+#project-page #hero .cover .collab img {
   height: 2em;
 }
 @media only screen and (min-width: 36em) {
-  #project-page .cover .collab img {
+  #project-page #hero .cover .collab img {
     height: 4em;
   }
 }
+#project-page #hero > div > div:last-of-type {
+  color: var(--hero-text-color);
+}
 @media only screen and (min-width: 48em) {
-  #project-page div:last-of-type {
+  #project-page #hero > div > div:last-of-type {
     margin-left: 4em;
     margin-right: 4em;
   }
 }
 @media only screen and (min-width: 48em) {
-  #project-page div:last-of-type {
+  #project-page #hero > div > div:last-of-type {
     margin-left: 8em;
     margin-right: 8em;
   }
+}
+#project-page iframe {
+  border: none;
+}
+#project-page #blog > div {
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  gap: calc(var(--gutter) * 2) var(--gutter);
+}
+#project-page #blog > div .paragraph {
+  align-items: stretch;
+  grid-column: 2/span calc(var(--col) - 2);
+}
+#project-page #blog > div .paragraph > div {
+  flex: 1 1 0;
+}
+#project-page #blog > div .paragraph .text p {
+  white-space: pre-line;
+}
+#project-page #blog > div .paragraph .text .btn-tertiary {
+  border-color: var(--btn-color);
+}
+#project-page #blog > div .paragraph .text .btn-tertiary:hover {
+  background-color: var(--btn-color);
+  color: var(--bg);
+}
+#project-page #blog > div .paragraph .img {
+  position: relative;
+  width: 100%;
+}
+#project-page #blog > div .paragraph img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=project.css.map */

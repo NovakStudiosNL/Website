@@ -4,49 +4,107 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	.cover {
-		&.overlap {
-			position: relative;
+	#hero {
+		background-color: var(--hero-color);
+		border-bottom: var(--hero-border);
 
+		> div > p:first-of-type {
+			color: var(--hero-text-color);
+		}
+
+		.cover {
+			&.overlap {
+				position: relative;
+
+				.collab {
+					@media only screen and (min-width: $md) {
+						position: absolute;
+					}
+				}
+			}
 			.collab {
-				@media only screen and (min-width: $md) {
-					position: absolute;
+				justify-self: center;
+				@media only screen and (min-width: $sm) {
+					width: fit-content;
+					justify-self: flex-start;
+				}
+
+				@media only screen and (min-width: $lg) {
+					margin: 0 4em;
+				}
+
+				h5 {
+					opacity: 0.5;
+					color: var(--hero-text-color);
+				}
+
+				img {
+					height: 2em;
+					@media only screen and (min-width: $sm) {
+						height: 4em;
+					}
 				}
 			}
 		}
-		.collab {
-			justify-self: center;
-			@media only screen and (min-width: $sm) {
-				width: fit-content;
-				justify-self: flex-start;
+
+		> div > div:last-of-type {
+			color: var(--hero-text-color);
+
+			@media only screen and (min-width: $md) {
+				margin-left: 4em;
+				margin-right: 4em;
 			}
 
-			@media only screen and (min-width: $lg) {
-				margin: 0 4em;
-			}
-
-			h5 {
-				opacity: 0.5;
-			}
-
-			img {
-				height: 2em;
-				@media only screen and (min-width: $sm) {
-					height: 4em;
-				}
+			@media only screen and (min-width: $md) {
+				margin-left: 8em;
+				margin-right: 8em;
 			}
 		}
 	}
 
-	div:last-of-type {
-		@media only screen and (min-width: $md) {
-			margin-left: 4em;
-			margin-right: 4em;
-		}
+	iframe {
+		border: none;
+	}
 
-		@media only screen and (min-width: $md) {
-			margin-left: 8em;
-			margin-right: 8em;
+	#blog > div {
+		display: grid;
+		grid-template-columns: repeat(var(--col), 1fr);
+		gap: calc(var(--gutter) * 2) var(--gutter);
+
+		.paragraph {
+			align-items: stretch;
+			grid-column: 2 / span calc(var(--col) - 2);
+
+			> div {
+				flex: 1 1 0;
+			}
+
+			.text {
+				p {
+					white-space: pre-line;
+				}
+
+				.btn-tertiary {
+					border-color: var(--btn-color);
+
+					&:hover {
+						background-color: var(--btn-color);
+						color: var(--bg);
+					}
+				}
+			}
+
+			.img {
+				position: relative;
+				width: 100%;
+			}
+
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }

@@ -149,6 +149,21 @@
   background-color: var(--secondary-light);
 }
 
+.btn-tertiary {
+  display: block;
+  padding: 0.5em 1em;
+  border-radius: var(--border-rad);
+  font-family: var(--font-h);
+  font-size: var(--size-h5);
+  border: 4px solid var(--secondary);
+  color: var(--text);
+  transition: var(--trans-speed);
+}
+.btn-tertiary:hover {
+  cursor: pointer;
+  background-color: var(--secondary-light);
+}
+
 .no-btn {
   background: none;
   border: none;
