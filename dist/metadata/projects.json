@@ -3,18 +3,35 @@
 	"cards": {
 		"energy_case": {
 			"locale_file": "energy_case",
+			"page": "energy_case",
 			"img_src": "src/img/cards/projects/energy_case.png",
 			"company_src": "src/img/logos/novak_full.png"
 		},
 		"bordscape": {
 			"locale_file": "bordscape",
+			"page": "bordscape",
 			"img_src": "src/img/cards/projects/bordscape.png",
 			"company_src": "src/img/logos/spellenwereld_small.png"
 		},
 		"sei_leiferser": {
 			"locale_file": "sei_leiferser",
+			"page": "sei_leiferser",
 			"img_src": "src/img/cards/projects/sei_leiferser.png",
 			"company_src": "src/img/logos/dolomiti.png"
+		}
+	},
+	"pages": {
+		"energy_case": {
+			"locale_file": "energy_case",
+			"heading": "This is the page for The Energy Case!"
+		},
+		"bordscape": {
+			"locale_file": "bordscape",
+			"heading": "This is the page for Bordscape!"
+		},
+		"sei_leiferser": {
+			"locale_file": "sei_leiferser",
+			"heading": "This is the page for Sei Leiferser!"
 		}
 	}
 }

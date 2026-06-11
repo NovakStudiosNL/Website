@@ -34,5 +34,26 @@
 		"header": {
 			"page": "projects"
 		}
+	},
+	"project_pages": {
+		"template": "src/templates/pages/project.hbs",
+		"energy_case": {
+			"key": "energy_case",
+			"head": {
+				"title": "Novak Studios | The Energy Case"
+			}
+		},
+		"bordscape": {
+			"key": "bordscape",
+			"head": {
+				"title": "Novak Studios | Bordscape"
+			}
+		},
+		"sei_leiferser": {
+			"key": "sei_leiferser",
+			"head": {
+				"title": "Novak Studios | Sei Leiferser"
+			}
+		}
 	}
 }

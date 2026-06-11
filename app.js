@@ -108,9 +108,15 @@ async function fetchMetadata() {
 async function renderPage(name) {
 	const metadata = await fetchMetadata()
 
-	const page = metadata.pages[name]
+	let page = metadata.pages[name] || metadata.pages.project_pages[name]
+	let templatePath = page.template
 
-	const res = await fetch(`${BASE_PATH}${page.template}`)
+	if (!metadata.pages[name]) {
+		page = metadata.pages.project_pages[name]
+		templatePath = metadata.pages.project_pages.template
+	}
+
+	const res = await fetch(`${BASE_PATH}${templatePath}`)
 	const source = await res.text()
 
 	const template = Handlebars.compile(source)
@@ -120,6 +126,7 @@ async function renderPage(name) {
 
 		base: BASE_PATH,
 
+		key: page.key || '',
 		projects: metadata.projects || {},
 		partners: metadata.partners || {},
 		reviews: metadata.reviews || {},
@@ -165,8 +172,10 @@ function render(page = {}) {
 		'src/templates/layout/footer.hbs',
 
 		'src/templates/pages/index.hbs',
-		'src/templates/pages/team.hbs',
 		'src/templates/pages/method.hbs',
+		'src/templates/pages/project.hbs',
+		'src/templates/pages/projects.hbs',
+		'src/templates/pages/team.hbs',
 
 		'src/templates/cards/project.hbs',
 		'src/templates/cards/review.hbs',
