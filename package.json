@@ -5,7 +5,7 @@
 	"scripts": {
 		"style": "sass --watch src/styles:dist/styles",
 		"locales": "node scripts/buildLocales.js",
-		"lint": "eslint ."
+		"format-lint": "prettier . --write && eslint ."
 	},
 	"repository": {
 		"type": "git",
