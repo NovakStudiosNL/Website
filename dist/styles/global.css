@@ -306,6 +306,11 @@ a {
   text-decoration: none;
 }
 
+.breadcrumb {
+  color: unset;
+  text-decoration: underline;
+}
+
 .social-link {
   height: 1em;
   width: 1em;
@@ -384,6 +389,10 @@ li {
   font-family: var(--font-text);
   font-size: var(--text-size);
   color: var(--text);
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 .xl,
@@ -864,6 +873,56 @@ header nav .btn-primary {
   background-image: url("../../../../src/img/cycle.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+#project-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#project-page .cover.overlap {
+  position: relative;
+}
+@media only screen and (min-width: 48em) {
+  #project-page .cover.overlap .collab {
+    position: absolute;
+  }
+}
+#project-page .cover .collab {
+  justify-self: center;
+}
+@media only screen and (min-width: 36em) {
+  #project-page .cover .collab {
+    width: fit-content;
+    justify-self: flex-start;
+  }
+}
+@media only screen and (min-width: 62em) {
+  #project-page .cover .collab {
+    margin: 0 4em;
+  }
+}
+#project-page .cover .collab h5 {
+  opacity: 0.5;
+}
+#project-page .cover .collab img {
+  height: 2em;
+}
+@media only screen and (min-width: 36em) {
+  #project-page .cover .collab img {
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 48em) {
+  #project-page div:last-of-type {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}
+@media only screen and (min-width: 48em) {
+  #project-page div:last-of-type {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
 }
 
 #page-projects section:last-of-type {

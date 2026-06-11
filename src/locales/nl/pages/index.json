@@ -1,13 +1,1 @@
-{
-	"greeting": "Hey!",
-	"projects": { "heading": "Projects" },
-	"partners": { "heading": "Our Partners" },
-	"reviews": { "heading": "Testimonials" },
-	"h1": "The indie studio where creative writing meets applied game design.",
-	"intro": "We use game theory and gamification to solve real-world problems by  creating games. We can assist you and enhance your projects using game  design techniques and tools!",
-	"cta-method": "Learn more",
-	"h2-team": "Meet the team",
-	"team-intro": "Novak Studios is a collaboration between five game developers who met in their study. Quickly forming a bond through their love for video games  and storytelling, they aim to share their passion with the rest of the  world.",
-	"cta-team": "Get to know us",
-	"tagline": "We use game theory and gamification to solve real-world problems by  creating games. We can assist you and enhance your projects using game  design techniques and tools!"
-}
+{"greeting":"Hey!","projects":{"heading":"Projects"},"partners":{"heading":"Our Partners"},"reviews":{"heading":"Testimonials"},"h1":"The indie studio where creative writing meets applied game design.","intro":"We use game theory and gamification to solve real-world problems by  creating games. We can assist you and enhance your projects using game  design techniques and tools!","cta-method":"Learn more","h2-team":"Meet the team","team-intro":"Novak Studios is a collaboration between five game developers who met in their study. Quickly forming a bond through their love for video games  and storytelling, they aim to share their passion with the rest of the  world.","cta-team":"Get to know us","tagline":"We use game theory and gamification to solve real-world problems by  creating games. We can assist you and enhance your projects using game  design techniques and tools!"}

@@ -23,15 +23,28 @@
 	"pages": {
 		"energy_case": {
 			"locale_file": "energy_case",
-			"heading": "This is the page for The Energy Case!"
+			"img_files": "energy_case",
+			"hero_color": "#1C100E",
+			"hero_stroke": "2px solid #FFFFFF",
+			"hero_text_color": "#f0e9e0"
 		},
 		"bordscape": {
 			"locale_file": "bordscape",
-			"heading": "This is the page for Bordscape!"
+			"img_files": "bordscape",
+			"collab": true,
+			"collab_overlap": "",
+			"hero_color": "#91BEC3",
+			"hero_stroke": "2px solid #91BEC3",
+			"hero_text_color": "#3a1943"
 		},
 		"sei_leiferser": {
 			"locale_file": "sei_leiferser",
-			"heading": "This is the page for Sei Leiferser!"
+			"img_files": "sei_leiferser",
+			"collab": true,
+			"collab_overlap": "overlap",
+			"hero_color": "#91C3A7",
+			"hero_stroke": "2px solid #91C3A7",
+			"hero_text_color": "#3a1943"
 		}
 	}
 }

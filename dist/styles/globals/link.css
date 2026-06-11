@@ -121,6 +121,11 @@ a {
   text-decoration: none;
 }
 
+.breadcrumb {
+  color: unset;
+  text-decoration: underline;
+}
+
 .social-link {
   height: 1em;
   width: 1em;

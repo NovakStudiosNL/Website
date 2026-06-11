@@ -117,85 +117,54 @@
   --trans-speed: 200ms;
 }
 
-p,
-a,
-button,
-li {
-  font-family: var(--font-text);
-  font-size: var(--text-size);
-  color: var(--text);
+#project-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#project-page .cover.overlap {
+  position: relative;
+}
+@media only screen and (min-width: 48em) {
+  #project-page .cover.overlap .collab {
+    position: absolute;
+  }
+}
+#project-page .cover .collab {
+  justify-self: center;
+}
+@media only screen and (min-width: 36em) {
+  #project-page .cover .collab {
+    width: fit-content;
+    justify-self: flex-start;
+  }
+}
+@media only screen and (min-width: 62em) {
+  #project-page .cover .collab {
+    margin: 0 4em;
+  }
+}
+#project-page .cover .collab h5 {
+  opacity: 0.5;
+}
+#project-page .cover .collab img {
+  height: 2em;
+}
+@media only screen and (min-width: 36em) {
+  #project-page .cover .collab img {
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 48em) {
+  #project-page div:last-of-type {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}
+@media only screen and (min-width: 48em) {
+  #project-page div:last-of-type {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
 }
 
-.upper {
-  text-transform: uppercase;
-}
-
-.xl,
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-family: var(--font-h);
-  color: var(--text);
-}
-
-.xl {
-  font-size: var(--size-xl);
-}
-
-h1,
-.h1 {
-  font-size: var(--size-h1);
-}
-
-h2,
-.h2 {
-  font-size: var(--size-h2);
-}
-
-h3,
-.h3 {
-  font-size: var(--size-h3);
-}
-
-h4,
-.h4 {
-  font-size: var(--size-h4);
-}
-
-h5,
-.h5 {
-  font-size: var(--size-h5);
-}
-
-.small {
-  font-size: var(--size-sm);
-}
-
-.tiny {
-  font-size: var(--size-tiny);
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.color-primary {
-  color: var(--primary);
-}
-
-/*# sourceMappingURL=text.css.map */
+/*# sourceMappingURL=project.css.map */

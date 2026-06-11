@@ -1,0 +1,52 @@
+@use '../../root' as *;
+
+#project-page {
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.cover {
+		&.overlap {
+			position: relative;
+
+			.collab {
+				@media only screen and (min-width: $md) {
+					position: absolute;
+				}
+			}
+		}
+		.collab {
+			justify-self: center;
+			@media only screen and (min-width: $sm) {
+				width: fit-content;
+				justify-self: flex-start;
+			}
+
+			@media only screen and (min-width: $lg) {
+				margin: 0 4em;
+			}
+
+			h5 {
+				opacity: 0.5;
+			}
+
+			img {
+				height: 2em;
+				@media only screen and (min-width: $sm) {
+					height: 4em;
+				}
+			}
+		}
+	}
+
+	div:last-of-type {
+		@media only screen and (min-width: $md) {
+			margin-left: 4em;
+			margin-right: 4em;
+		}
+
+		@media only screen and (min-width: $md) {
+			margin-left: 8em;
+			margin-right: 8em;
+		}
+	}
+}
