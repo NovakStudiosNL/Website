@@ -224,7 +224,7 @@
 #method section:last-of-type .row-2.title div {
   aspect-ratio: 1/1;
   padding: 1.5em;
-  background-image: url("../../../src/img/cycle.svg");
+  background-image: url("../../src/img/cycle.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: calc(100% / (var(--col) / 2));
