@@ -160,17 +160,6 @@ const buildTranslations = () => {
 
 	const translations = loadTranslations()
 
-	// fs.writeFileSync(
-	// 	path.join(
-	// 		__dirname.substring(0, __dirname.lastIndexOf('/')),
-	// 		'public',
-	// 		'locales',
-	// 		'locales.js',
-	// 	),
-	// 	`const locales = ${JSON.stringify(translations)}`,
-	// 	'utf8',
-	// )
-
 	Object.keys(translations).forEach((lng) => {
 		fs.writeFileSync(
 			path.join(
