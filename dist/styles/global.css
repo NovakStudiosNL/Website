@@ -573,7 +573,7 @@ header {
   padding: 1em var(--margin);
   background-color: var(--bg);
   box-shadow: var(--shadow-sm);
-  z-index: 2;
+  z-index: 20;
 }
 header nav .logo {
   display: none;
