@@ -134,4 +134,8 @@ body {
   background-color: var(--bg-light);
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=layout.css.map */
