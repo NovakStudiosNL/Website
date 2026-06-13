@@ -12,12 +12,14 @@
 		<div class="max-width page-p d-flex flex-col my-2 gap-1">
 			<p class="small">
 				<span>
-					<a href="{{@root.base}}index.html" class="breadcrumb">Home</a>
+					<a href="{{@root.base}}index.html" class="breadcrumb"
+						>{{t 'templates.layout.header.home'}}</a
+					>
 				</span>
 				/
 				<span>
 					<a href="{{@root.base}}src/pages/projects.html" class="breadcrumb">
-						Projects
+						{{t 'templates.layout.header.projects'}}
 					</a>
 				</span>
 				/
@@ -30,7 +32,10 @@
 			<div class="cover {{project.collab_overlap}}">
 				{{#if project.collab}}
 				<div class="collab d-flex flex-col center">
-					<h5>In collaboration with:</h5>
+					<h5>
+						{{tVariables 'pages.projects.${project}.collab'
+						project=project.locale_file }}
+					</h5>
 					<img
 						src="{{@root.base}}src/img/projects/{{project.img_files }}/collab.png"
 					/>
@@ -57,8 +62,8 @@
 
 	{{#if project.video}}
 	<section id="video" class="w-100 d-flex flex-col center">
-		<div class="max-width page-p d-flex flex-col mt-2 gap-1">
-			<iframe width="526" height="296" src="{{project.video}}"></iframe>
+		<div class="w-100 max-width page-p d-flex flex-col center mt-2 gap-1">
+			<iframe src="{{project.video}}"></iframe>
 		</div>
 	</section>
 	{{/if}}
