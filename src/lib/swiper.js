@@ -1,44 +1,16 @@
 import { breaks } from './config.js'
+import { swiperConfig } from './config.js'
 
 const carousels = document.querySelectorAll('.swiper')
-const swiperConfig = {
-	default: {
-		slidesPerView: 'auto',
-
-		pagination: {
-			el: '',
-			type: 'bullets',
-			clickable: true,
-		},
-
-		breakpoints: {
-			[breaks.lg]: {
-				slidesPerView: 3,
-			},
-		},
-	},
-	endless: {
-		slidesPerView: 'auto',
-		loop: true,
-		speed: 12000,
-		allowTouchMove: true,
-		autoplay: {
-			delay: 1,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-		},
-	},
-	none: {
-		slidesPerView: 'auto',
-	},
-}
 const activeSwipers = {}
 
+// Find which kind of swiper to load form the config
 const getSwiperOpts = (carousel) => {
 	let config = 'default'
 	let opts = swiperConfig.default
 	opts.pagination.el = `.${carousel.dataset.class}-pagination`
 
+	// Partners only has a swiper for smaller screens
 	if (carousel.dataset.class == 'partners') {
 		config = 'none'
 		opts = swiperConfig.none
@@ -59,6 +31,7 @@ const getSwiperOpts = (carousel) => {
 	return { opts: opts, config: config }
 }
 
+// Update swiper if it's different than what is currently loaded
 const updateSwiper = () => {
 	if (carousels.length == 0) return
 

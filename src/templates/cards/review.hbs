@@ -13,13 +13,11 @@
 			/>
 		</svg>
 		<p class="review-text text-center">
-			{{tVariables 'cards.reviews.reviews.${reviewer}.review'
-			reviewer=locale_file }}
+			{{tVars 'cards.reviews.reviews.${reviewer}.review' reviewer=locale_file }}
 		</p>
 	</div>
 	<p class="small text-center">
-		{{tVariables 'cards.reviews.reviews.${reviewer}.name' reviewer=locale_file
-		}}, {{tVariables 'cards.reviews.reviews.${reviewer}.function'
-		reviewer=locale_file }}
+		{{tVars 'cards.reviews.reviews.${reviewer}.name' reviewer=locale_file }},
+		{{tVars 'cards.reviews.reviews.${reviewer}.function' reviewer=locale_file }}
 	</p>
 </div>

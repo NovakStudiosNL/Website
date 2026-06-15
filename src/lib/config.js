@@ -1,9 +1,10 @@
+// Get base path string to use for relative links
 export const BASE_PATH = ['localhost', '127.0.0.1'].includes(location.hostname)
 	? '/'
 	: '/Website/'
 
+// Check SCSS root for breakpoints (em * text-size)
 export const breaks = {
-	// see root: em number * text-size number
 	xs: 30 * 16,
 	sm: 36 * 16,
 	md: 48 * 16,
@@ -11,6 +12,7 @@ export const breaks = {
 	xl: 75 * 16,
 }
 
+// All templates loaded within other templates (aka all templates except layout.hbs)
 export const partials = [
 	// layout
 	'src/templates/layout/head.hbs',
@@ -29,3 +31,47 @@ export const partials = [
 	'src/templates/cards/review.hbs',
 	'src/templates/cards/team.hbs',
 ]
+
+// JS files necessary after render without .js
+export const jsScripts = [
+	{
+		file: 'i18n',
+		module: true,
+	},
+	{
+		file: 'swiper',
+		module: true,
+	},
+]
+
+export const swiperConfig = {
+	default: {
+		slidesPerView: 'auto',
+
+		pagination: {
+			el: '',
+			type: 'bullets',
+			clickable: true,
+		},
+
+		breakpoints: {
+			[breaks.lg]: {
+				slidesPerView: 3,
+			},
+		},
+	},
+	endless: {
+		slidesPerView: 'auto',
+		loop: true,
+		speed: 12000,
+		allowTouchMove: true,
+		autoplay: {
+			delay: 1,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+	},
+	none: {
+		slidesPerView: 'auto',
+	},
+}

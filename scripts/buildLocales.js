@@ -29,8 +29,8 @@ const fixMissingTranslations = () => {
 			console.log(
 				`No directories found in ${langDir}. Copying over fallback translations to locale.`,
 			)
-			fs.cp(fallbackDir, langDir, { recursive: true }, (err) => {
-				if (err) throw new Error(err)
+			fs.cp(fallbackDir, langDir, { recursive: true }, (error) => {
+				if (error) throw new Error(error)
 			})
 			continue
 		}
@@ -73,15 +73,15 @@ const fixMissingFolders = (dir, fallbackDir) => {
 		console.log(
 			`Missing directory in ${dir}: "${file}". Copying folder and its subfolders/files.`,
 		)
-		fs.cp(fileDir, path.join(dir, file), { recursive: true }, (err) => {
-			if (err) throw new Error(err)
+		fs.cp(fileDir, path.join(dir, file), { recursive: true }, (error) => {
+			if (error) throw new Error(error)
 		})
 	}
 }
 
 const fixMissingFiles = (file, dir, fallbackDir) => {
-	fs.copyFile(fallbackDir, path.join(dir, file), 0, (err) => {
-		if (err) throw new Error(err)
+	fs.copyFile(fallbackDir, path.join(dir, file), 0, (error) => {
+		if (error) throw new Error(error)
 	})
 }
 

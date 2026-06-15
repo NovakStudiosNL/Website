@@ -1,4 +1,4 @@
-import { BASE_PATH, partials } from './src/lib/config.js'
+import { BASE_PATH } from './src/lib/config.js'
 import { registerHelpers } from './src/lib/helpers.js'
 import {
 	loadLayout,
@@ -8,19 +8,23 @@ import {
 } from './src/lib/templates.js'
 import { initI18n } from './src/lib/i18n.js'
 
-let layoutTemplate
+export let layoutTemplate
 
 const initApp = async () => {
 	try {
+		// Custom Handlebars functions
 		registerHelpers()
 
+		// layout.hbs template
 		layoutTemplate = await loadLayout()
 
-		await loadPartials(partials)
+		// Templates used within a template
+		await loadPartials()
 
-		await initI18n(layoutTemplate)
-	} catch (err) {
-		console.error('Error initializing page:', err)
+		// Load translations with the page (rendering the page is done within)
+		await initI18n()
+	} catch (error) {
+		console.error('Error initializing page:', error)
 		throw error
 	}
 }

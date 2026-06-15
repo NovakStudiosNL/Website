@@ -24,8 +24,8 @@
 				</span>
 				/
 				<span>
-					{{tVariables 'pages.projects.${project}.title'
-					project=project.locale_file }}
+					{{tVars 'pages.projects.${project}.title' project=project.locale_file
+					}}
 				</span>
 			</p>
 
@@ -33,7 +33,7 @@
 				{{#if project.collab}}
 				<div class="collab d-flex flex-col center">
 					<h5>
-						{{tVariables 'pages.projects.${project}.collab'
+						{{tVars 'pages.projects.${project}.collab'
 						project=project.locale_file }}
 					</h5>
 					<img
@@ -49,11 +49,11 @@
 
 			<div class="d-flex flex-col gap-1 center">
 				<h3 class="upper text-center">
-					{{tVariables 'pages.projects.${project}.tagline'
+					{{tVars 'pages.projects.${project}.tagline'
 					project=project.locale_file }}
 				</h3>
 				<p class="text-center">
-					{{tVariables 'pages.projects.${project}.description'
+					{{tVars 'pages.projects.${project}.description'
 					project=project.locale_file }}
 				</p>
 			</div>
@@ -78,26 +78,23 @@
 				<div class="text d-flex flex-col gap-2">
 					<div>
 						<h5>
-							{{tVariables
-							'pages.projects.${project}.article.paragraph_1.heading'
+							{{tVars 'pages.projects.${project}.article.paragraph_1.heading'
 							project=project.locale_file }}
 						</h5>
 						<p>
-							{{tVariables 'pages.projects.${project}.article.paragraph_1.text'
+							{{tVars 'pages.projects.${project}.article.paragraph_1.text'
 							project=project.locale_file }}
 						</p>
 					</div>
 					<div class="d-flex flex-col gap-05">
 						{{#if project.paragraphs.paragraph_1.btn_1}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_1.btn_1'
+							>{{tVars 'pages.projects.${project}.article.paragraph_1.btn_1'
 							project=project.locale_file }}</a
 						>
 						{{/if}} {{#if project.paragraphs.paragraph_1.btn_2}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_1.btn_2'
+							>{{tVars 'pages.projects.${project}.article.paragraph_1.btn_2'
 							project=project.locale_file }}</a
 						>
 						{{/if}}
@@ -121,26 +118,23 @@
 				<div class="text d-flex flex-col gap-2">
 					<div>
 						<h5>
-							{{tVariables
-							'pages.projects.${project}.article.paragraph_2.heading'
+							{{tVars 'pages.projects.${project}.article.paragraph_2.heading'
 							project=project.locale_file }}
 						</h5>
 						<p>
-							{{tVariables 'pages.projects.${project}.article.paragraph_2.text'
+							{{tVars 'pages.projects.${project}.article.paragraph_2.text'
 							project=project.locale_file }}
 						</p>
 					</div>
 					<div class="d-flex flex-col gap-05">
 						{{#if project.paragraphs.paragraph_2.btn_1}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_2.btn_1'
+							>{{tVars 'pages.projects.${project}.article.paragraph_2.btn_1'
 							project=project.locale_file }}</a
 						>
 						{{/if}} {{#if project.paragraphs.paragraph_2.btn_2}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_2.btn_2'
+							>{{tVars 'pages.projects.${project}.article.paragraph_2.btn_2'
 							project=project.locale_file }}</a
 						>
 						{{/if}}
@@ -149,7 +143,7 @@
 			</div>
 
 			<h3 class="paragraph text-center">
-				{{tVariables 'pages.projects.${project}.article.tagline'
+				{{tVars 'pages.projects.${project}.article.tagline'
 				project=project.locale_file }}
 			</h3>
 
@@ -157,26 +151,23 @@
 				<div class="text d-flex flex-col gap-2">
 					<div>
 						<h5>
-							{{tVariables
-							'pages.projects.${project}.article.paragraph_3.heading'
+							{{tVars 'pages.projects.${project}.article.paragraph_3.heading'
 							project=project.locale_file }}
 						</h5>
 						<p>
-							{{tVariables 'pages.projects.${project}.article.paragraph_3.text'
+							{{tVars 'pages.projects.${project}.article.paragraph_3.text'
 							project=project.locale_file }}
 						</p>
 					</div>
 					<div class="d-flex flex-col gap-05">
 						{{#if project.paragraphs.paragraph_3.btn_1}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_3.btn_1'
+							>{{tVars 'pages.projects.${project}.article.paragraph_3.btn_1'
 							project=project.locale_file }}</a
 						>
 						{{/if}} {{#if project.paragraphs.paragraph_3.btn_2}}
 						<a class="btn-tertiary text-center"
-							>{{tVariables
-							'pages.projects.${project}.article.paragraph_3.btn_2'
+							>{{tVars 'pages.projects.${project}.article.paragraph_3.btn_2'
 							project=project.locale_file }}</a
 						>
 						{{/if}}
