@@ -1,7 +1,7 @@
 <div class="max-width d-flex justify-between gap-05">
 	<img src="{{base}}src/img/logo_full.svg" />
 	<div class="d-flex flex-col gap-05">
-		<p class="bold">Language</p>
+		<p class="bold">{{t "layout.footer.heading"}}</p>
 		<ul class="d-flex flex-col gap-025">
 			<li>
 				<button
@@ -9,7 +9,7 @@
 					onclick="changeLanguage('en')"
 				>
 					<img src="{{base}}src/img/flags/flag_en.svg" />
-					English
+					{{t "layout.footer.en"}}
 				</button>
 			</li>
 			<li>
@@ -18,7 +18,7 @@
 					onclick="changeLanguage('nl')"
 				>
 					<img src="{{base}}src/img/flags/flag_nl.svg" />
-					Dutch
+					{{t "layout.footer.nl"}}
 				</button>
 			</li>
 			<li>
@@ -27,7 +27,7 @@
 					onclick="changeLanguage('it')"
 				>
 					<img src="{{base}}src/img/flags/flag_it.svg" />
-					Italian
+					{{t "layout.footer.it"}}
 				</button>
 			</li>
 		</ul>
