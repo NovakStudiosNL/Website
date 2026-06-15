@@ -1,3 +1,5 @@
+import { registerHelpers } from './src/lib/helpers.js'
+
 const BASE_PATH =
 	location.hostname == 'localhost' || location.hostname == '127.0.0.1'
 		? '/'
@@ -18,24 +20,6 @@ function loadScript(fileName, isModule = false) {
 	if (isModule) script.type = 'module'
 	script.defer = true
 	document.body.appendChild(script)
-}
-
-function registerHelpers() {
-	Handlebars.registerHelper('isActive', (string, condition) =>
-		string === condition ? 'active' : '',
-	)
-
-	Handlebars.registerHelper('tVariables', function (string, options) {
-		const vars = options.hash || {}
-
-		Object.keys(vars).forEach((key) => {
-			string = string.replace('${' + key + '}', String(vars[key]))
-		})
-
-		return i18next.t(string)
-	})
-
-	Handlebars.registerHelper('t', (key) => i18next.t(key))
 }
 
 async function loadLayout() {
