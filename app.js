@@ -5,7 +5,7 @@ const BASE_PATH =
 		? '/'
 		: '/Website/'
 let layoutTemplate
-const breaks = {
+export const breaks = {
 	// see root: em number * text-size number
 	xs: 30 * 16,
 	sm: 36 * 16,
@@ -123,7 +123,7 @@ async function renderPage(name) {
 		body,
 	})
 
-	loadScript('swiper')
+	loadScript('swiper', true)
 }
 
 // Render function

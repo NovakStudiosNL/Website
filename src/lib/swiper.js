@@ -1,3 +1,5 @@
+import { breaks } from '../../app.js'
+
 const carousels = document.querySelectorAll('.swiper')
 const swiperConfig = {
 	default: {
