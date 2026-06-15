@@ -3,7 +3,6 @@
 #intro {
 	.hero {
 		display: grid;
-		grid-template-columns: repeat(var(--col), 1fr);
 		gap: var(--gutter);
 
 		h1 {
@@ -27,12 +26,14 @@
 		}
 
 		.intro-logo {
+			grid-column: 1 / span var(--col);
+
 			width: 100%;
 
-			grid-column: 1 / span var(--col);
 			@media only screen and (min-width: $sm) {
 				grid-column: calc(var(--col) - 2) / span 3;
 			}
+
 			@media only screen and (min-width: $md) {
 				grid-column: calc(var(--col) - 3) / span 4;
 			}
@@ -40,16 +41,12 @@
 	}
 
 	.tagline {
-		display: grid;
-		grid-template-columns: repeat(var(--col), 1fr);
-		gap: var(--gutter);
+		grid-column: 1 / span var(--col);
 
-		p {
-			text-align: center;
-			grid-column: 1 / span var(--col);
-			@media only screen and (min-width: $sm) {
-				grid-column: 2 / span calc(var(--col) - 2);
-			}
+		text-align: center;
+
+		@media only screen and (min-width: $sm) {
+			grid-column: 2 / span calc(var(--col) - 2);
 		}
 	}
 }

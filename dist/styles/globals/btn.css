@@ -17,14 +17,7 @@
   }
 }
 :root {
-  --margin: 2em;
-}
-@media only screen and (min-width: 30em) {
-  :root {
-    --margin: 4em;
-  }
-}
-:root {
+  --gutter: 1em;
   --max-width: calc(100vw - (var(--margin) * 2));
 }
 @media only screen and (min-width: 36em) {
@@ -48,7 +41,16 @@
   }
 }
 :root {
-  --gutter: 1em;
+  --margin: 2em;
+}
+@media only screen and (min-width: 30em) {
+  :root {
+    --margin: 4em;
+  }
+}
+:root {
+  --border-rad: 5px;
+  --trans-speed: 200ms;
   --font-h:
   	'Merriweather Sans', Inter, Roboto, 'Helvetica Neue', 'Nimbus Sans', Arial,
   	system-ui, sans-serif;
@@ -84,23 +86,38 @@
   --warning: #e4d854;
   --success: #24591f;
   --info: #19437c;
+  --l-increment: 5;
   --text-muted: hsl(from var(--text) h calc(s - 20) calc(l - 20));
-  --bg-dark: hsl(from var(--bg) h s calc(l - 5));
-  --primary-dark: hsl(from var(--primary) h s calc(l - 5));
-  --secondary-dark: hsl(from var(--secondary) h s calc(l - 5));
-  --accent-dark: hsl(from var(--accent) h s calc(l - 5));
-  --bg-darkest: hsl(from var(--bg) h s calc(l - 10));
-  --primary-darkest: hsl(from var(--primary) h s calc(l - 10));
-  --secondary-darkest: hsl(from var(--secondary) h s calc(l - 10));
-  --accent-darkest: hsl(from var(--accent) h s calc(l - 10));
-  --bg-light: hsl(from var(--bg) h s calc(l + 5));
-  --primary-light: hsl(from var(--primary) h s calc(l + 5));
-  --secondary-light: hsl(from var(--secondary) h s calc(l + 5));
-  --accent-light: hsl(from var(--accent) h s calc(l + 5));
-  --bg-lightest: hsl(from var(--bg) h s calc(l + 10));
-  --primary-lightest: hsl(from var(--primary) h s calc(l + 10));
-  --secondary-lightest: hsl(from var(--secondary) h s calc(l + 10));
-  --accent-lightest: hsl(from var(--accent) h s calc(l + 10));
+  --bg-dark: hsl(from var(--bg) h s calc(l - var(--l-increment)));
+  --primary-dark: hsl(from var(--primary) h s calc(l - var(--l-increment)));
+  --secondary-dark: hsl(from var(--secondary) h s calc(l - var(--l-increment)));
+  --accent-dark: hsl(from var(--accent) h s calc(l - var(--l-increment)));
+  --bg-darkest: hsl(from var(--bg) h s calc(l - (var(--l-increment) * 2)));
+  --primary-darkest: hsl(
+  	from var(--primary) h s calc(l - (var(--l-increment) * 2))
+  );
+  --secondary-darkest: hsl(
+  	from var(--secondary) h s calc(l - (var(--l-increment) * 2))
+  );
+  --accent-darkest: hsl(
+  	from var(--accent) h s calc(l - (var(--l-increment) * 2))
+  );
+  --bg-light: hsl(from var(--bg) h s calc(l + var(--l-increment)));
+  --primary-light: hsl(from var(--primary) h s calc(l + var(--l-increment)));
+  --secondary-light: hsl(
+  	from var(--secondary) h s calc(l + var(--l-increment))
+  );
+  --accent-light: hsl(from var(--accent) h s calc(l + var(--l-increment)));
+  --bg-lightest: hsl(from var(--bg) h s calc(l + (var(--l-increment) * 2)));
+  --primary-lightest: hsl(
+  	from var(--primary) h s calc(l + (var(--l-increment) * 2))
+  );
+  --secondary-lightest: hsl(
+  	from var(--secondary) h s calc(l + (var(--l-increment) * 2))
+  );
+  --accent-lightest: hsl(
+  	from var(--accent) h s calc(l + (var(--l-increment) * 2))
+  );
   --grad-prim-l-prim-d: linear-gradient(
   	var(--primary-light),
   	var(--primary-dark)
@@ -113,35 +130,33 @@
   	0 6px 8px 0 var(--shadow-color-30), 0 8px 10px 0 var(--shadow-color-15);
   --shadow-lg:
   	0 8px 10px 0 var(--shadow-color-30), 0 8px 12px 0 var(--shadow-color-15);
-  --border-rad: 5px;
-  --trans-speed: 200ms;
 }
 
 .btn-primary {
   display: block;
-  padding: 0.5em 1em;
   border-radius: var(--border-rad);
   box-shadow: var(--shadow-sm);
+  padding: 0.5em 1em;
   font-family: var(--font-h);
   font-size: var(--size-h5);
-  background-color: var(--primary);
   color: var(--bg);
+  background-color: var(--primary);
   transition: var(--trans-speed);
 }
 .btn-primary:hover {
-  cursor: pointer;
   box-shadow: var(--shadow-lg);
   background-color: var(--primary-dark);
+  cursor: pointer;
 }
 
 .btn-secondary {
   display: block;
-  padding: 0.5em 1em;
   border-radius: var(--border-rad);
+  padding: 0.5em 1em;
   font-family: var(--font-h);
   font-size: var(--size-h5);
-  background-color: var(--secondary);
   color: var(--bg);
+  background-color: var(--secondary);
   transition: var(--trans-speed);
 }
 .btn-secondary:hover {
@@ -151,27 +166,27 @@
 
 .btn-tertiary {
   display: block;
-  padding: 0.5em 1em;
+  border: 4px solid var(--secondary);
   border-radius: var(--border-rad);
+  padding: 0.5em 1em;
   font-family: var(--font-h);
   font-size: var(--size-h5);
-  border: 4px solid var(--secondary);
   color: var(--text);
   transition: var(--trans-speed);
 }
 .btn-tertiary:hover {
-  cursor: pointer;
   background-color: var(--secondary-light);
+  cursor: pointer;
 }
 
 .no-btn {
-  background: none;
   border: none;
+  background: none;
   transition: var(--trans-speed);
 }
 .no-btn:hover {
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=btn.css.map */
