@@ -1,4 +1,4 @@
-import { breaks } from '../../app.js'
+import { breaks } from './config.js'
 
 const carousels = document.querySelectorAll('.swiper')
 const swiperConfig = {
