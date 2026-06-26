@@ -8,13 +8,21 @@ export const initI18n = async () => {
 		if (typeof i18next === 'undefined')
 			throw new Error('i18next library is not loaded.')
 
+		const persisted =
+			typeof window !== 'undefined' ? localStorage.getItem('lang') : null
+		const browserLang =
+			typeof navigator !== 'undefined'
+				? (navigator.language || navigator.userLanguage || '').split('-')[0]
+				: null
+		const initialLang = persisted || browserLang || 'en'
+
 		await i18next.init({
-			lng: 'en',
+			lng: initialLang,
 			fallbackLng: 'en',
 			debug: false,
 		})
 
-		await loadLanguage('en')
+		await loadLanguage(initialLang)
 	} catch (error) {
 		console.error('Error initializing i18next:', error)
 		throw error
@@ -53,6 +61,7 @@ const extractNameUrl = () => {
 
 // Language switch
 export const changeLanguage = (lang) => {
+	if (typeof window !== 'undefined') localStorage.setItem('lang', lang)
 	loadLanguage(lang)
 }
 
