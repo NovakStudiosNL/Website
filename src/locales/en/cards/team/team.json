@@ -1,20 +1,21 @@
 {
 	"portfolio": "Portfolio",
-	"jeremy": {
-		"name": "Jeremy Koeleman",
-		"function": "Project Manager & Narrative Lead"
-	},
+
 	"bjorn": {
 		"name": "Bjorn Klein Ligtenberg",
-		"function": "Level Designer & Marketing"
+		"function": "Level Designer & Game Programmer"
 	},
 	"maxim": {
-		"name": "Maxim Mihaylov ",
+		"name": "Maksim Mihaylov ",
 		"function": "Mechanics Designer & Animator"
 	},
 	"lorenzo": {
 		"name": "Lorenzo Tondo",
-		"function": "Technical Lead & Game User Researcher"
+		"function": "Producer & Technical Lead"
+	},
+	"jeremy": {
+		"name": "Jeremy Koeleman",
+		"function": "Narrative Lead"
 	},
 	"kris": {
 		"name": "Kris Petrova",

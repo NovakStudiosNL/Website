@@ -18,6 +18,12 @@
 			"page": "sei_leiferser",
 			"img_src": "src/img/cards/projects/sei_leiferser.png",
 			"company_src": "src/img/logos/dolomiti.png"
+		},
+		"raiders_of_the_lost_quark": {
+			"locale_file": "raiders_of_the_lost_quark",
+			"page": "raiders_of_the_lost_quark",
+			"img_src": "src/img/cards/projects/sei_leiferser.png",
+			"company_src": "src/img/logos/dolomiti.png"
 		}
 	},
 	"pages": {
@@ -53,6 +59,16 @@
 			}
 		},
 		"sei_leiferser": {
+			"locale_file": "sei_leiferser",
+			"img_files": "sei_leiferser",
+			"collab": true,
+			"collab_overlap": "overlap",
+			"hero_color": "#91C3A7",
+			"hero_stroke": "2px solid #91C3A7",
+			"hero_text_color": "#3a1943",
+			"paragraphs": {}
+		},
+		"raiders_of_the_lost_quark": {
 			"locale_file": "sei_leiferser",
 			"img_files": "sei_leiferser",
 			"collab": true,
