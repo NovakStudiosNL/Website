@@ -23,7 +23,7 @@
 			"locale_file": "raiders_of_the_lost_quark",
 			"page": "raiders_of_the_lost_quark",
 			"img_src": "src/img/cards/projects/sei_leiferser.png",
-			"company_src": "src/img/logos/dolomiti.png"
+			"company_src": "src/img/logos/cnr.png"
 		}
 	},
 	"pages": {
@@ -33,12 +33,14 @@
 			"hero_color": "#1C100E",
 			"hero_stroke": "2px solid #FFFFFF",
 			"hero_text_color": "#f0e9e0",
-			"video": "https://www.youtube.com/embed/GYTd0i-T6_8?si=qg1GjRSNsWasUHM0",
+			"video": "https://www.youtube.com/embed/GYTd0i-T6_8",
 			"btn_color": "#FFBC00",
 			"paragraphs": {
 				"paragraph_3": {
 					"btn_1": true,
-					"btn_2": true
+					"btn_1_href": "https://novak-studios.itch.io/the-energy-case",
+					"btn_2": true,
+					"btn_2_href": "https://store.steampowered.com/app/3654380/The_Energy_Case/"
 				}
 			}
 		},
@@ -50,11 +52,12 @@
 			"hero_color": "#91BEC3",
 			"hero_stroke": "2px solid #91BEC3",
 			"hero_text_color": "#3a1943",
-			"video": "https://www.youtube.com/embed/U04nc-TDkiE?si=8Edf-mW_kUTZOqyG",
+			"video": "https://www.youtube.com/embed/U04nc-TDkiE",
 			"btn_color": "#91BEC3",
 			"paragraphs": {
 				"paragraph_3": {
-					"btn_1": true
+					"btn_1": true,
+					"btn_1_href": "https://novak-studios.itch.io/bordscape"
 				}
 			}
 		},
@@ -69,14 +72,22 @@
 			"paragraphs": {}
 		},
 		"raiders_of_the_lost_quark": {
-			"locale_file": "sei_leiferser",
-			"img_files": "sei_leiferser",
+			"locale_file": "raiders_of_the_lost_quark",
+			"img_files": "raiders_of_the_lost_quark",
 			"collab": true,
 			"collab_overlap": "overlap",
-			"hero_color": "#91C3A7",
-			"hero_stroke": "2px solid #91C3A7",
-			"hero_text_color": "#3a1943",
-			"paragraphs": {}
+			"hero_color": "#54615C",
+			"hero_stroke": "2px solid #54615C",
+			"hero_text_color": "#1C100E",
+			"video": "https://www.youtube.com/embed/U04nc-TDkiE",
+			"btn_color": "#54615C",
+			"paragraphs": {
+				"paragraph_3": {
+					"btn_1": true,
+					"btn_1_href": "https://novak-studios.itch.io/lost-quark"
+				}
+			}
+			
 		}
 	}
 }
